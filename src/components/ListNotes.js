@@ -26,20 +26,20 @@ const ListNotes = (note) => {
 		}
 	};
 
-	useEffect(() => {
-		getNotes();
-	}, []);
+	// useEffect(() => {
+	// 	getNotes();
+	// }, []);
 
-	const getNotes = async () => {
-		try {
-			const response = await fetch('/api/notes');
-			const jsonData = await response.json();
-			console.log(jsonData);
-			setNotes(jsonData);
-		} catch (err) {
-			console.error(err.message);
-		}
-	};
+	// const getNotes = async () => {
+	// 	try {
+	// 		const response = await fetch('/api/notes');
+	// 		const jsonData = await response.json();
+	// 		console.log(jsonData);
+	// 		setNotes(jsonData);
+	// 	} catch (err) {
+	// 		console.error(err.message);
+	// 	}
+	// };
 
 	return (
 		<>
