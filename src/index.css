@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* View Note */
+
+.view {
+  max-height: 400px;
+  overflow: scroll;
+}
+
+/* Edit Note */
+
+.edit {
+  width: 100%;
+  max-height: 80%;
+  overflow: scroll;
+  padding: 5px;
+}
+
+/* Note Title */
+#note-title {
+  border: none;
+  outline: none;
+  padding :none;
+}
+
+
+/* Note textarea */
+#note-content {
+  border: none;
+  outline: none;
+  padding :none;
+  height: 40vh;
+  overflow: scroll;
+}
+
+#note-content:focus, #note-title:focus {
+  outline: inherit;
+}
+
+#note-item {
+  height: 30vh;
+  overflow: scroll;
+}
+
+/* Table-row */
+.first-letter::first-letter {
+  font-weight: bolder;
+  font-size: 24px;
+  border-bottom: thin solid grey;
+  padding: auto auto;
+}
+
+.content-row {
+  max-width: 450px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-bottom: none;
+}
+
+textarea, td {
+  letter-spacing: 2px;
+}
+
+td {
+  padding: 0;
+}
+
+
