@@ -1,9 +1,9 @@
 require('dotenv').config();
 var Airtable = require('airtable');
-var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
-	process.env.AIRTABLE_BASE_ID
-);
-const table = base(process.env.AIRTABLE_TABLE_NAME);
+
+const { secret, baseId, db_name } = process.env;
+var base = new Airtable({ apiKey: secret }).base(baseId);
+const table = base(db_name);
 
 console.log(table);
 
