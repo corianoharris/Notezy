@@ -7,8 +7,16 @@ const Login = () => {
 
 	return (
 		<>
-			<div className=" container text-center shadow p-3 mx-auto rounded w-25 login">
-				<h1>Notsy</h1>
+			<div
+				className=" container text-center shadow p-3 mx-auto rounded login"
+				style={{
+					backgroundColor: '#ffc106',
+					width: '300px',
+				}}>
+				<span className="icon" role="img" aria-label="note emoji">
+					&#128221;
+				</span>
+				<h1>Note Collector</h1>
 				<button
 					className="btn btn-outline-primary"
 					onClick={() => loginWithRedirect()}>
