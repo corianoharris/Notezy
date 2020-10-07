@@ -4,7 +4,7 @@ import '../index.css';
 
 const Navigation = () => {
 	return (
-		<nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+		<nav className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow">
 			<span className="icon" role="img" aria-label="note emoji">
 				&#128221;
 			</span>
