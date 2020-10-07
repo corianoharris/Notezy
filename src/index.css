@@ -105,6 +105,11 @@ td {
   pointer-events: none;
 }
 
+/* Icon */
+.icon {
+  font-size: 40px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .spinner {
     animation: Spinner-spin infinite 5s linear;
