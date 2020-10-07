@@ -38,13 +38,15 @@ const CreateNote = () => {
 					backgroundColor: '#343b3f',
 					padding: '8px',
 				}}>
-				<form className="mt-5 was-validated" onSubmit={submitNote}>
+				<form
+					className="mt-5 was-validated bg-dark shadow"
+					onSubmit={submitNote}>
 					<label className="h3 text-warning" htmlFor="note-title">
 						Title
 					</label>
 					<input
 						type="text"
-						className="form-control p-3 bg-white text-warning first-letter"
+						className="form-control p-3 bg-dark text-warning first-letter border border-light"
 						id="note-title"
 						placeholder="add title..."
 						name="note"
@@ -61,7 +63,7 @@ const CreateNote = () => {
 					</label>
 					<textarea
 						type="text"
-						className="form-control p-3 bg-white text-warning first-letter"
+						className="form-control p-3 bg-dark text-warning first-letter border border-light"
 						id="note-content"
 						placeholder="add note..."
 						name="note-content"
