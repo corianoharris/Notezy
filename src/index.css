@@ -93,8 +93,7 @@ td {
 
 /* login */
 
-.login {
-  width: 100px;
+ .login {
   margin: 50% auto;
 }
 
@@ -129,7 +128,7 @@ td {
 @media(min-width:641px) {
   .login {
     width: 200px;
-    margin: 25%;
+    margin: 35%;
   }
 
   .profile-text {
@@ -139,7 +138,7 @@ td {
 
 @media(min-width: 981px) {
   .login {
-    width: 200px;
-    margin: 25%;
+        margin: 15%;
   }
+
 }
