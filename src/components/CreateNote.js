@@ -4,6 +4,7 @@ import '../index.css';
 
 // components
 import Navigation from './Navigation';
+import Profile from './Profile';
 
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
@@ -30,6 +31,7 @@ const CreateNote = () => {
 	return (
 		<Fragment>
 			<Navigation />
+			<Profile />
 			<div className="container w-100">
 				<div className="text-white">
 					<form className="mt-5 was-validated" onSubmit={submitNote}>
