@@ -1,68 +1,101 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Title / Repository Name
 
-## Available Scripts
+Note Collector
 
-In the project directory, you can run:
+## Live
 
-### `yarn start`
+https://note-collector.netlify.app/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About / Synopsis
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+A fullstack application that allows a user to create, store, view, and edit custom notes.
 
-### `yarn test`
+## Table of contents
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> - [Title / Repository Name](#title--repository-name)
+>   - [Synopsis](#synopsis)
+>   - [Table of contents](#table-of-contents)
+>   - [Technologies](#technologies)
+>   - [Motivations](#motivations)
+>   - [Takeaways](#takeaways)
+>   - [Styleguides](#styleguides)
+>   - [Installation](#installation)
+>   - [Usage](#usage)
+>     - [Screenshots](#screenshots)
+>     - [Features](#features)
+>   - [Code](#code)
+>     - [Content](#content)
+>     - [Requirements](#requirements)
+>     - [Limitations](#limitations)
+>     - [Build](#build)
+>     - [Deploy (how to install build product)](#deploy-how-to-install-build-product)
+>   - [Resources (Documentation and other links)](#resources-documentation-and-other-links)
+>   - [Contributing / Reporting issues](#contributing--reporting-issues)
+>   - [License](#license)
+>   - [Authors](#authors)
 
-### `yarn build`
+## Techonologies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Bootstrap
+- Netlify
+- Airtable
+- Jest
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Styleguides
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Prettier
+- AirBnB
+- BEM ITCSS
 
-### `yarn eject`
+## Motivations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Mother many sticky notes at her desk, in the car, and on her dresser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Takeaways
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I learned how to config Netlify serverless function, create and filter through Airtable, and TDD.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Deploy
 
-## Learn More
+https://note-collector.netlify.app/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Screenshots
 
-### Code Splitting
+### Features
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Form
+- Table of notes
 
-### Analyzing the Bundle Size
+### Use Cases
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Tests
 
-### Making a Progressive Web App
+"yarn test" to run test suites. Using Jest.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Deploy
 
-### Advanced Configuration
+On Netlify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Resources (Documentation and other links)
 
-### Deployment
+## Authors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Coriano Harris
 
-### `yarn build` fails to minify
+## Acknowledgements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- James Quick
+- JC Smiley
+- RJ Beers
+- Dennis K.
+
+## Contributing / Reporting issues
+
+Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+
+## License
+
+A short snippet describing the license (MIT, Apache, etc.)
