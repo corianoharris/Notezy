@@ -33,8 +33,7 @@ const CreateNote = () => {
 			<Navigation />
 			<Profile />
 			<div
-				className="text-white"
-				className="container w-100"
+				className="text-white container w-100"
 				style={{
 					backgroundColor: '#343b3f',
 					padding: '8px',
