@@ -44,7 +44,7 @@ const ListNotes = (note) => {
 	return (
 		<>
 			<Navigation />
-			<div className="table-notes">
+			<div className="table-notes container">
 				<table className="table table-responsive table-striped table-hover table-dark w-auto m-4">
 					<thead className="text-uppercase th.sm">
 						<tr>
