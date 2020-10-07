@@ -18,6 +18,7 @@ const Navigation = () => {
 					</li>
 				</ul>
 			</div>
+			<LogoutButton />
 		</nav>
 	);
 };
