@@ -24,8 +24,8 @@ const Profile = () => {
 				/>
 				<div className="intro mt-5 mb-5">
 					<div className="profile-text">
-						<h2 className="profile-welcome">Welcome</h2>
-						<h2 className="text-warning profile-user">{user.name}</h2>
+						<h2 className="profile-welcome">Welcome,</h2>
+						<h2 className="text-white profile-user">{user.name}</h2>
 					</div>
 				</div>
 			</div>
