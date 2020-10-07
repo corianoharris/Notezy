@@ -45,15 +45,15 @@ const ListNotes = (note) => {
 		<>
 			<Navigation />
 			<div className="table-notes">
-				<table className="table table-responsive table-striped table-hover table-dark w-75 mx-auto m-5">
-					<thead className="text-uppercase">
+				<table className="table table-responsive table-striped table-hover table-dark w-auto m-4">
+					<thead className="text-uppercase th.sm">
 						<tr>
-							<th>Title</th>
-							<th>Note</th>
-							<th>Created At</th>
-							<th>View</th>
-							<th>Edit</th>
-							<th>Delete</th>
+							<th scope="col">Title</th>
+							<th scope="col">Note</th>
+							<th scope="col">Created At</th>
+							<th scope="col">View</th>
+							<th scope="col">Edit</th>
+							<th scope="col">Delete</th>
 						</tr>
 					</thead>
 					<tbody className="text-warning">
