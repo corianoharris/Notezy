@@ -8,11 +8,15 @@ Note Collector
 
 ## Live
 
-https://note-collector.netlify.app/
+[Live]https://note-collector.netlify.app/
 
 ## About / Synopsis
 
 A fullstack application that allows a user to create, store, view, and edit custom notes.
+
+## Kanban
+
+[Trello]https://trello.com/b/g8v6aeTD
 
 ## Table of contents
 
