@@ -7,12 +7,12 @@ const Navigation = () => {
 			<div className="collpase navbar-collapse">
 				<ul className="navbar-nav mr-auto">
 					<li className="navbar-item">
-						<a href="/" className="nav-link">
+						<a href={'/'} className="nav-link">
 							Note
 						</a>
 					</li>
 					<li className="navbar-item">
-						<a href="/notes" className="nav-link">
+						<a href={'/notes'} className="nav-link">
 							Collections
 						</a>
 					</li>
