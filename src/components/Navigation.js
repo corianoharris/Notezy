@@ -5,7 +5,7 @@ import '../index.css';
 const Navigation = () => {
 	return (
 		<nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-			<span role="img" aria-label="note emoji">
+			<span className="icon" role="img" aria-label="note emoji">
 				&#128221;
 			</span>
 			<a href={'/'} className="navbar-brand">
