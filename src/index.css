@@ -82,13 +82,28 @@ td {
 
 /*  Profile  */
 .profile-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
+  width: 36px;
+  height: 36px;
 }
 
-.profile-text {
-  font-size: 1rem;
+/* welcome */
+
+/* intro */
+
+.intro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.profile-welcome {
+  font-size: 10px;
+  color: #fff;
+}
+
+.profile-user {
+  font-size: 13px;
 }
 
 /* login */
@@ -124,6 +139,23 @@ td {
   }
 }
 
+@media(min-width:481px) {
+
+  .profile-welcome {
+    font-size: 14px;
+  }
+
+  .profile-user {
+    font-size: 20px;
+  }
+
+  .profile-image {
+  width: 40px;
+  height: 40px;
+  }
+}
+
+
 
 @media(min-width:641px) {
   .login {
@@ -131,14 +163,36 @@ td {
     margin: 35%;
   }
 
-  .profile-text {
-    font-size: 1.5rem;
+  .profile-welcome {
+    font-size: 18px;
+  }
+
+  .profile-user {
+    font-size: 24px;
+  }
+
+  .profile-image {
+  width: 60px;
+  height: 60px;
   }
 }
 
 @media(min-width: 981px) {
   .login {
         margin: 15%;
+  }
+
+   .profile-welcome {
+    font-size: 28px;
+  }
+
+  .profile-user {
+    font-size: 36px;
+  }
+
+  .profile-image {
+  width: 70px;
+  height: 70px;
   }
 
 }
