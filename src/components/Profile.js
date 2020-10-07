@@ -18,11 +18,16 @@ const Profile = () => {
 		isAuthenticated && (
 			<div className="container mt-3 d-flex align-items-center border-bottom">
 				<img
-					className="m-3 profile-image"
+					className="m-3 rounded-circle profile-image"
 					src={user.picture}
 					alt={user.name}
 				/>
-				<h2 className="profile-text">Welcome, {user.name}</h2>
+				<div className="intro mt-5 mb-5">
+					<div className="profile-text">
+						<h2 className="profile-welcome">Welcome</h2>
+						<h2 className="text-warning profile-user">{user.name}</h2>
+					</div>
+				</div>
 			</div>
 		)
 	);
