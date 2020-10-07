@@ -33,13 +33,13 @@ const CreateNote = () => {
 			<Navigation />
 			<Profile />
 			<div
-				className="text-white container w-100"
+				className="text-white container w-100 shadow"
 				style={{
 					backgroundColor: '#343b3f',
 					padding: '8px',
 				}}>
 				<form
-					className="mt-5 was-validated bg-dark shadow"
+					className="mt-5 was-validated bg-dark"
 					onSubmit={submitNote}>
 					<label className="h3 text-warning" htmlFor="note-title">
 						Title
