@@ -44,9 +44,9 @@ const ListNotes = (note) => {
 	return (
 		<>
 			<Navigation />
-			<div className="table-notes">
+			<div className="table-notes w-100">
 				<table className="table table-responsive table-striped table-hover table-dark w-75 m-5 mx-auto shadow">
-					<thead className="text-uppercase th.sm">
+					<thead className="text-uppercase th.sm bg-light text-dark">
 						<tr>
 							<th scope="col">Title</th>
 							<th scope="col">Note</th>
