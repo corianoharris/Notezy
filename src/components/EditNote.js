@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import moment from 'moment';
 import '../App.css';
 import '../index.css';
 
@@ -105,6 +106,10 @@ const EditNote = ({ note }) => {
 							</div>
 						</div>
 						<div className="modal-footer bg-dark text-white">
+							<p className="content-row w-auto">
+								Modified:{' '}
+								{moment(note.modified_at).format('MM-DD-YYYY')}
+							</p>
 							<button
 								type="button"
 								className="btn btn-outline-warning text-uppercase"
