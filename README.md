@@ -64,10 +64,6 @@ Mother many sticky notes at her desk, in the car, and on her dresser.
 
 I learned how to config Netlify serverless function, create and filter through Airtable, and TDD.
 
-## Deploy
-
-https://note-collector.netlify.app/
-
 ## Usage
 
 ### Screenshots
@@ -83,7 +79,7 @@ https://note-collector.netlify.app/
 
 "yarn test" to run test suites. Using Jest.
 
-### Deploy
+## Deploy
 
 On Netlify
 
