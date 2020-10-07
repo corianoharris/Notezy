@@ -2,6 +2,10 @@
 
 Note Collector
 
+## Badges
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47372f08-ed33-45be-afbc-4af927055963/deploy-status)](https://app.netlify.com/sites/note-collector/deploys)
+
 ## Live
 
 https://note-collector.netlify.app/
