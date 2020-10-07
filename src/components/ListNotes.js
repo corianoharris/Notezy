@@ -67,7 +67,7 @@ const ListNotes = (note) => {
 								</td>
 								<td className="w-auto first-letter">
 									<p className="content-row w-auto">
-										{moment(note.date).format('MM-DD-YYYY')}
+										{moment(note.created_at).format('MM-DD-YYYY')}
 									</p>
 								</td>
 								<td>
