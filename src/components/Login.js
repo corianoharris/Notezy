@@ -10,8 +10,9 @@ const Login = () => {
 			<div
 				className=" container text-center shadow p-3 mx-auto rounded login"
 				style={{
-					backgroundColor: '#ffc106',
+					backgroundColor: '#343b3f',
 					width: '300px',
+					color: '#fff',
 				}}>
 				<span className="icon" role="img" aria-label="note emoji">
 					&#128221;
