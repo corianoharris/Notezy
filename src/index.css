@@ -177,6 +177,10 @@ td {
 }
 
 @media(min-width: 981px) {
+  .login {
+        margin: 15%;
+  }
+
    .profile-welcome {
     font-size: 28px;
   }
