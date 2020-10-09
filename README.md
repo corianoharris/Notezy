@@ -25,15 +25,12 @@ A fullstack application that allows a user to create, store, view, and edit cust
 - Tablet
 - Mobile
 
-## Kanban, device
-
-[Trello](https://trello.com/b/g8v6aeTD)
-
 ## Table of contents
 
 > - [Title / Repository Name](#title--repository-name)
 >   - [Synopsis](#synopsis)
 >   - [Table of contents](#table-of-contents)
+>   - [Product Management](#product-management)
 >   - [Technologies](#technologies)
 >   - [Motivations](#motivations)
 >   - [Takeaways](#takeaways)
@@ -53,7 +50,11 @@ A fullstack application that allows a user to create, store, view, and edit cust
 >   - [License](#license)
 >   - [Authors](#authors)
 
-## Techonologies
+## Project Management
+
+[Trello](https://trello.com/b/g8v6aeTD)
+
+## Technologies
 
 - React.js
 - Bootstrap
