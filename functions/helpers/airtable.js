@@ -6,6 +6,4 @@ var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
 );
 const table = base(process.env.AIRTABLE_TABLE_NAME);
 
-console.log(table);
-
 module.exports = { table };

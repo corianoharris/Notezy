@@ -14,7 +14,18 @@ Note Collector
 
 A fullstack application that allows a user to create, store, view, and edit custom notes.
 
-## Kanban
+## Product
+
+- MVP ( Minimal Viable Product)
+- MLP ( Minimal Lovable Product)
+
+## Devices
+
+- Desktop
+- Tablet
+- Mobile
+
+## Kanban, device
 
 [Trello](https://trello.com/b/g8v6aeTD)
 
@@ -75,9 +86,15 @@ I learned how to config Netlify serverless function, create and filter through A
 
 ### Use Cases
 
+- Use can create a custom note
+- Use can view a note
+- Use can edit a note
+- Use can delete a note
+- Use can view all notes
+
 ## Tests
 
-"yarn test" to run test suites. Using Jest.
+Run "yarn test"
 
 ## Deploy
 
@@ -94,7 +111,8 @@ Coriano Harris
 - James Quick
 - JC Smiley
 - RJ Beers
-- Dennis K.
+- Dennis Kennetz
+- Corey McCarthy
 
 ## Contributing / Reporting issues
 
