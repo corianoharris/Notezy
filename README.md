@@ -12,7 +12,7 @@ Note Collector
 
 ## About / Synopsis
 
-A fullstack application that allows a user to create, store, view, and edit custom notes.
+A full-stack application that allows a user to create, store, view, and edit custom notes.
 
 ## Product
 
