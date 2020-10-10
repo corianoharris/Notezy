@@ -20,6 +20,10 @@ code {
     monospace;
 }
 
+.app-title {
+  font-size: 42px;
+}
+
 /* View Note */
 
 .view {
@@ -34,6 +38,12 @@ code {
   max-height: 80%;
   overflow: scroll;
   padding: 5px;
+  color: #800000;
+  border: none;
+}
+
+.edit:focus {
+  outline: none;
 }
 
 /* Note Title */
@@ -49,7 +59,7 @@ code {
   border: none;
   outline: none;
   padding :none;
-  height: 40vh;
+  height: 20vh;
   overflow: scroll;
 }
 
@@ -92,7 +102,21 @@ td {
   height: 36px;
 }
 
+/* nav */
+
+.nav-icon {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.links:hover,.links:focus{
+  color: #efd5df;
+  font-weight: bolder;
+}
+
 /* welcome */
+
+
 
 /* intro */
 
@@ -103,19 +127,32 @@ td {
   padding: 0;
 }
 
+.profile-text{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
 .profile-welcome {
   font-size: 10px;
-  color: #fff;
 }
 
 .profile-user {
   font-size: 13px;
+  margin-left: 5px;
+  background: #fff;
+  border-radius: 30px;
+  padding: 5px 10px;
 }
 
 /* login */
 
  .login {
   margin: 50% auto;
+  width: 90%;
+  height: 20%;
 }
 
 /* Spinner */
@@ -123,12 +160,80 @@ td {
   width: 80px;
   height: 80px;
   pointer-events: none;
+  fill: #800000;
 }
 
 /* Icon */
 .icon {
   font-size: 40px;
 }
+
+/* label */
+
+.h3 {
+  color: #800000;
+  font-family: 'Fredericka The Great', cursive;
+  font-weight: bolder;
+
+}
+
+/* Input */
+
+.input {
+  font-weight: 300;
+}
+
+/* Table */
+
+.note-table {
+  color: #800000;
+  background: inherit;
+}
+
+.th {
+  background: #800000;
+}
+
+.note-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #800000;
+  font-family: 'Fredericka The Great';
+}
+
+td {
+  border-bottom: thin solid #800000;
+}
+
+.note-content {
+  color: #800000;
+  font-weight: 300;
+}
+
+.note-date {
+  font-weight: 500;
+  color: #800000;
+}
+
+/* Edit Note */
+
+.edit-title, .text {
+  color: #800000;
+}
+
+.edit-note {
+  background: #800000;
+}
+
+
+/* View Note */
+
+.view-note  {
+  color: #800000;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .spinner {
@@ -180,6 +285,10 @@ td {
   width: 60px;
   height: 60px;
   }
+
+  .login {
+  width: 80%;
+}
 }
 
 @media(min-width: 981px) {
@@ -192,12 +301,25 @@ td {
   }
 
   .profile-user {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .profile-image {
   width: 70px;
   height: 70px;
   }
+
+  .intro {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  }
+
+  .h1 {
+    font-size: 60px;
+  }
+
+  .login {
+  width: 40%;
+}
 
 }
