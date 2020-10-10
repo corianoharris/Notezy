@@ -73,9 +73,9 @@ code {
 
 /* Table-row */
 .first-letter::first-letter {
-  font-weight: bolder;
+  font-weight: 900;
   font-size: 24px;
-  border-bottom: thin solid grey;
+  border-bottom: thin solid #800000;
   padding: auto auto;
 }
 
