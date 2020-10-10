@@ -63,8 +63,8 @@ const EditNote = ({ note }) => {
 			<div className="modal" id={`edit${note.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content">
-						<div className="modal-header bg-dark text-white">
-							<h4 className="modal-title text-warning">Edit Note</h4>
+						<div className="modal-header edit-note text-white">
+							<h4 className="modal-title h3 text-white">Edit Note</h4>
 							<button
 								type="button"
 								className="close text-uppercase text-white"
@@ -74,14 +74,16 @@ const EditNote = ({ note }) => {
 							</button>
 						</div>
 
-						<div className="modal-body bg-dark text-white view-textarea">
+						<div className="modal-body  text-white view-textarea">
 							<div>
-								<label className="text-left" htmlFor="title">
+								<label
+									className="text-left h3  edit-title"
+									htmlFor="title">
 									Title:
 								</label>
 								<input
 									type="text"
-									className="form-control bg-dark text-warning "
+									className="form-control text"
 									id={`#title${note.id}`}
 									name="title"
 									value={title}
@@ -89,14 +91,16 @@ const EditNote = ({ note }) => {
 								/>
 							</div>
 						</div>
-						<div className="modal-body bg-dark text-white view-textarea">
+						<div className="modal-body text-white view-textarea">
 							<div>
-								<label className="text-left" htmlFor="note">
+								<label
+									className="text-left h3 edit-title"
+									htmlFor="note">
 									Note:
 								</label>
 								<textarea
 									type="text"
-									className="bg-dark text-warning edit"
+									className="form-control edit text"
 									id={`#content${note.id}`}
 									name="note"
 									value={content}
@@ -105,7 +109,7 @@ const EditNote = ({ note }) => {
 									}></textarea>
 							</div>
 						</div>
-						<div className="modal-footer bg-dark text-white">
+						<div className="modal-footer text">
 							<p className="content-row w-auto">
 								Modified:{' '}
 								{moment(note.modified_at).format('MM-DD-YYYY')}

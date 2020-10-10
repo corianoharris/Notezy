@@ -33,20 +33,18 @@ const CreateNote = () => {
 			<Navigation />
 			<Profile />
 			<div
-				className="text-white container w-100 shadow"
+				className="text-white container rounded w-100 shadow"
 				style={{
-					backgroundColor: '#343b3f',
+					backgroundColor: 'inherit',
 					padding: '8px',
 				}}>
-				<form
-					className="mt-5 was-validated bg-dark"
-					onSubmit={submitNote}>
-					<label className="h3 text-warning" htmlFor="note-title">
+				<form className="mt-5 was-validated" onSubmit={submitNote}>
+					<label className="h3" htmlFor="note-title">
 						Title
 					</label>
 					<input
 						type="text"
-						className="form-control p-3 bg-dark text-warning first-letter border border-light"
+						className="form-control p-3 first-letter border border-light input"
 						id="note-title"
 						placeholder="add title..."
 						name="note"
@@ -58,12 +56,12 @@ const CreateNote = () => {
 					<div className="invalid-feedback mt-2 mb-2">
 						Please add a title...
 					</div>
-					<label className="h3 text-warning" htmlFor="note-content">
+					<label className="h3" htmlFor="note-content">
 						Note
 					</label>
 					<textarea
 						type="text"
-						className="form-control p-3 bg-dark text-warning first-letter border border-light"
+						className="form-control p-3 bg-white dark first-letter border border-light input"
 						id="note-content"
 						placeholder="add note..."
 						name="note-content"

@@ -17,8 +17,8 @@ const ViewNote = ({ note, id }) => {
 			<div className="modal" id={`view${note.id}`}>
 				<div className="modal-dialog ">
 					<div className="modal-content">
-						<div className="modal-header bg-dark text-white">
-							<h4 className="modal-title text-warning">View Note</h4>
+						<div className="modal-header edit-note text-white">
+							<h4 className="modal-title h3 text-white">View Note</h4>
 							<button
 								type="button"
 								className="close text-uppercase text-white"
@@ -27,33 +27,37 @@ const ViewNote = ({ note, id }) => {
 							</button>
 						</div>
 						<div>
-							<div className=" modal-body bg-dark text-white ">
-								<label className="text-left" htmlFor="view-title">
+							<div className=" modal-body">
+								<label
+									className="text-left h3 edit-title"
+									htmlFor="view-title">
 									Title:
 								</label>
 								<p
 									type="text"
-									className="bg-dark text-warning "
+									className="view-note "
 									id={`#view${note.id}`}
 									name="view-title">
 									{title}
 								</p>
 							</div>
 
-							<div className=" modal-body bg-dark text-white ">
-								<label className="text-left" htmlFor="view-note">
+							<div className=" modal-body">
+								<label
+									className="text-left  h3 edit-title"
+									htmlFor="view-note">
 									Note:
 								</label>
 								<p
 									type="text"
-									className="bg-dark text-warning"
+									className="text view-note "
 									id={`#content${note.id}`}
 									name="view-note">
 									{content}
 								</p>
 							</div>
 						</div>
-						<div className="modal-footer bg-dark text-white">
+						<div className="modal-footer text">
 							<button
 								type="button"
 								className="btn btn-outline-danger"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import '../index.css';
+import womanNoteImg from '../assets/woman_note.jpeg';
 
 const Login = () => {
 	const { loginWithRedirect } = useAuth0();
@@ -8,16 +9,22 @@ const Login = () => {
 	return (
 		<>
 			<div
-				className=" container text-center shadow p-3 mx-auto rounded login"
+				className="text-center shadow p-5 mx-auto rounded border-0 border-dark login"
 				style={{
-					backgroundColor: '#343b3f',
-					width: '300px',
+					backgroundImage: `url(${womanNoteImg})`,
+					backgroundSize: 'cover',
 					color: '#fff',
 				}}>
 				<span className="icon" role="img" aria-label="note emoji">
-					&#128221;
+					&#9776;
 				</span>
-				<h1>Note Collector</h1>
+				<h1
+					className="app-title"
+					style={{
+						fontFamily: 'Permanent Marker',
+					}}>
+					Note Collector
+				</h1>
 				<button
 					className="btn btn-outline-primary"
 					onClick={() => loginWithRedirect()}>

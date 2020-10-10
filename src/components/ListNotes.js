@@ -45,8 +45,8 @@ const ListNotes = (note) => {
 		<>
 			<Navigation />
 			<div className="table-notes w-100">
-				<table className="table table-responsive table-striped table-hover table-dark w-75 m-5 mx-auto shadow">
-					<thead className="text-uppercase th.sm bg-light text-dark">
+				<table className="table table-responsive table-striped table-hover w-75 m-5 mx-auto shadow rounded note-table">
+					<thead className="text-uppercase th.sm th text-light">
 						<tr>
 							<th scope="col">Title</th>
 							<th scope="col">Note</th>
@@ -56,17 +56,17 @@ const ListNotes = (note) => {
 							<th scope="col">Delete</th>
 						</tr>
 					</thead>
-					<tbody className="text-warning">
+					<tbody className="">
 						{notes.map((note) => (
 							<tr key={note.id}>
-								<td className="w-50 first-letter">
+								<td className="w-50 note-title">
 									<p className="content-row">{note.title}</p>
 								</td>
 								<td className="w-50 first-letter">
-									<p className="content-row ">{note.content}</p>
+									<p className="content-row note-content">{note.content}</p>
 								</td>
-								<td className="w-auto first-letter">
-									<p className="content-row w-auto">
+								<td className="w-auto">
+									<p className="content-row w-auto note-date">
 										{moment(note.created_at).format('MM-DD-YYYY')}
 									</p>
 								</td>
