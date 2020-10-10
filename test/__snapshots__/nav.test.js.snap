@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="navbar navbar-expand-lg border-bottom-3 shadow"
+>
+  <a
+    className="navbar-brand links"
+    href="/"
+    style={
+      Object {
+        "color": "#800000",
+        "fontFamily": "Permanent Marker",
+      }
+    }
+  >
+    Note Collector
+  </a>
+  <div
+    className="collpase navbar-collapse"
+  >
+    <ul
+      className="navbar-nav mr-auto"
+    >
+      <li
+        className="navbar-item"
+      >
+        <a
+          className="nav-link active links"
+          href="/note"
+          style={
+            Object {
+              "color": "#800000",
+            }
+          }
+        >
+          Note
+        </a>
+      </li>
+      <li
+        className="navbar-item"
+      >
+        <a
+          className="nav-link links"
+          href="/notes"
+          style={
+            Object {
+              "color": "#800000",
+            }
+          }
+        >
+          Collections
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="container mt-5 mx-auto spinner text-center"
+  >
+    <svg
+      fill="currentColor"
+      height={70}
+      size={70}
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 512 512"
+      width={70}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+      />
+    </svg>
+  </div>
+</nav>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="container mt-5 mx-auto spinner text-center"
+>
+  <svg
+    fill="currentColor"
+    height={70}
+    size={70}
+    stroke="currentColor"
+    strokeWidth="0"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 512 512"
+    width={70}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+    />
+  </svg>
+</div>
+`;
