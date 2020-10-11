@@ -63,7 +63,9 @@ const ListNotes = (note) => {
 									<p className="content-row">{note.title}</p>
 								</td>
 								<td className="w-50 first-letter">
-									<p className="content-row note-content">{note.content}</p>
+									<p className="content-row note-content">
+										{note.content}
+									</p>
 								</td>
 								<td className="w-auto">
 									<p className="content-row w-auto note-date">
