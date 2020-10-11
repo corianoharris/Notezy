@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
+import { useAuth0 } from '@auth0/auth0-react';
 import '../App.css';
 import '../index.css';
 
@@ -10,6 +11,7 @@ import Navigation from './Navigation';
 import Spinner from './Spinner';
 
 const ListNotes = (note) => {
+	const { user } = useAuth0();
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 
@@ -30,14 +32,34 @@ const ListNotes = (note) => {
 
 	useEffect(() => {
 		getNotes();
-	}, []);
+	});
+
+	// const getNotes = async () => {
+	// 	try {
+	// 		const response = await fetch('/api/notes');
+	// 		const jsonData = await response.json();
+	// 		console.log(jsonData);
+	// 		setNotes(jsonData);
+	// 		setLoading(false);
+	// 	} catch (err) {
+	// 		console.error(err.message);
+	// 	}
+	// };
+
+	// trying to filter and return the motes associated with auth0 user.name
+
+	// import { useAuth0 } from '@auth0/auth0-react';
 
 	const getNotes = async () => {
 		try {
-			const response = await fetch('/api/notes');
+			const response = await fetch('/api/notes', {
+				method: 'GET',
+			});
 			const jsonData = await response.json();
+			const email = () =>
+				jsonData.filter((note) => note.email === user.name);
 			console.log(jsonData);
-			setNotes(jsonData);
+			setNotes(email);
 			setLoading(false);
 		} catch (err) {
 			console.error(err.message);
