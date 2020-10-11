@@ -32,7 +32,7 @@ const ListNotes = (note) => {
 
 	useEffect(() => {
 		getNotes();
-	}, []);
+	});
 
 	// const getNotes = async () => {
 	// 	try {
@@ -48,8 +48,6 @@ const ListNotes = (note) => {
 
 	// trying to filter and return the motes associated with auth0 user.name
 
-	// import { useAuth0 } from '@auth0/auth0-react';
-
 	const getNotes = async () => {
 		try {
 			const response = await fetch('/api/notes', {
@@ -58,7 +56,6 @@ const ListNotes = (note) => {
 			const jsonData = await response.json();
 			const email = () =>
 				jsonData.filter((note) => note.email === user.name);
-			console.log(jsonData);
 			setNotes(email);
 			setLoading(false);
 		} catch (err) {
