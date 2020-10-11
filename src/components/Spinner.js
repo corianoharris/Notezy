@@ -1,11 +1,11 @@
 import React from 'react';
-import { FaSpinner } from 'react-icons/fa';
+import { ImSpinner9 } from 'react-icons/im';
 import '../index.css';
 
 const Spinner = () => {
 	return (
 		<div className="container mt-5 mx-auto spinner text-center">
-			<FaSpinner size={70} />
+			<ImSpinner9 size={70} />
 		</div>
 	);
 };
