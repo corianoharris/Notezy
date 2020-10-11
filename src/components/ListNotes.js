@@ -7,9 +7,11 @@ import '../index.css';
 import EditNote from './EditNote';
 import ViewNote from './ViewNote';
 import Navigation from './Navigation';
+import Spinner from './Spinner';
 
 const ListNotes = (note) => {
 	const [notes, setNotes] = useState([]);
+	const [isLoading, setLoading] = useState(true);
 
 	//delete report function
 
@@ -36,10 +38,15 @@ const ListNotes = (note) => {
 			const jsonData = await response.json();
 			console.log(jsonData);
 			setNotes(jsonData);
+			setLoading(false);
 		} catch (err) {
 			console.error(err.message);
 		}
 	};
+
+	if (isLoading) {
+		return <Spinner />;
+	}
 
 	return (
 		<>
