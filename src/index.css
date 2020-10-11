@@ -233,6 +233,21 @@ td {
   color: #800000;
 }
 
+/* No Note */
+
+.no-note-link, .no-note-link:active, .no-note-link:focus {
+  font-family: 'Fredericka The Great', cursive;
+  color: #800000;
+}
+
+.no-note-link:hover {
+  color: #800000;
+  text-decoration: none;
+  border-bottom: medium solid #800000;
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .spinner {
