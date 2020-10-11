@@ -22,8 +22,6 @@ A full-stack application that allows a user to create, store, view, and edit cus
 ## Devices
 
 - Desktop
-- Tablet
-- Mobile
 
 ## Table of contents
 
