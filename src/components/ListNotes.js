@@ -32,7 +32,7 @@ const ListNotes = (note) => {
 
 	useEffect(() => {
 		getNotes();
-	});
+	}, []);
 
 	// const getNotes = async () => {
 	// 	try {
