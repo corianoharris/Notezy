@@ -9,6 +9,7 @@ import EditNote from './EditNote';
 import ViewNote from './ViewNote';
 import Navigation from './Navigation';
 import Spinner from './Spinner';
+import NoNotes from './NoNotes';
 
 const ListNotes = (note) => {
 	const { user } = useAuth0();
@@ -34,20 +35,6 @@ const ListNotes = (note) => {
 		getNotes();
 	});
 
-	// const getNotes = async () => {
-	// 	try {
-	// 		const response = await fetch('/api/notes');
-	// 		const jsonData = await response.json();
-	// 		console.log(jsonData);
-	// 		setNotes(jsonData);
-	// 		setLoading(false);
-	// 	} catch (err) {
-	// 		console.error(err.message);
-	// 	}
-	// };
-
-	// trying to filter and return the motes associated with auth0 user.name
-
 	const getNotes = async () => {
 		try {
 			const response = await fetch('/api/notes', {
@@ -65,6 +52,10 @@ const ListNotes = (note) => {
 
 	if (isLoading) {
 		return <Spinner />;
+	}
+
+	if (!notes || notes.length === 0) {
+		return <NoNotes />;
 	}
 
 	return (
