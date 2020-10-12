@@ -5,7 +5,7 @@ const NoNotes = () => {
 	return (
 		<>
 			<h2 className="container w-100 mt-5 mx-auto text-center">
-				You currently don't have any notes. Please got to{' '}
+				You currently don't have any notes. Please go to{' '}
 				<a className="no-note-link" href="./note">
 					Note
 				</a>{' '}
