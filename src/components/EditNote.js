@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import moment from 'moment';
+import DOMPurify from 'dompurify';
 import '../App.css';
 import '../index.css';
 
@@ -68,8 +69,7 @@ const EditNote = ({ note }) => {
 							<button
 								type="button"
 								className="close text-uppercase text-white"
-								data-dismiss="modal"
-								onChange={(e) => setTitle(e.target.value)}>
+								data-dismiss="modal">
 								&times;
 							</button>
 						</div>
@@ -86,7 +86,7 @@ const EditNote = ({ note }) => {
 									className="form-control text"
 									id={`#title${note.id}`}
 									name="title"
-									value={title}
+									value={DOMPurify.sanitize(title)}
 									onChange={(e) => setTitle(e.target.value)}
 								/>
 							</div>
@@ -103,7 +103,7 @@ const EditNote = ({ note }) => {
 									className="form-control edit text"
 									id={`#content${note.id}`}
 									name="note"
-									value={content}
+									value={DOMPurify.sanitize(content)}
 									onChange={(e) =>
 										setContent(e.target.value)
 									}></textarea>
