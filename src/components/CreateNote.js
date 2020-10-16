@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import '../App.css';
 import '../index.css';
 import { useAuth0 } from '@auth0/auth0-react';
+import DOMPurify from 'dompurify';
 
 // components
 import Navigation from './Navigation';
@@ -52,7 +53,7 @@ const CreateNote = () => {
 						id="note-title"
 						placeholder="add title..."
 						name="note"
-						value={title}
+						value={DOMPurify.sanitize(title)}
 						onChange={(e) => setTitle(e.target.value)}
 						required
 					/>
@@ -69,7 +70,7 @@ const CreateNote = () => {
 						id="note-content"
 						placeholder="add note..."
 						name="note-content"
-						value={content}
+						value={DOMPurify.sanitize(content)}
 						onChange={(e) => setContent(e.target.value)}
 						required></textarea>
 					<div className="valid-feedback mt-2 mb-2">Thank you.</div>
