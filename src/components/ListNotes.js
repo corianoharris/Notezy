@@ -62,7 +62,7 @@ const ListNotes = (note) => {
 		<>
 			<Navigation />
 			<div className="table-notes w-100">
-				<table className="table table-responsive table-hover w-75 m-5 mx-auto shadow rounded note-table">
+				<table className="table table-responsive w-75  px-auto mt-5 mb-5 mr-1 ml-1 mx-auto shadow rounded note-table">
 					<thead className="text-uppercase th.sm th text-light">
 						<tr>
 							<th scope="col">Title</th>
@@ -76,28 +76,36 @@ const ListNotes = (note) => {
 					<tbody className="">
 						{notes.map((note) => (
 							<tr key={note.id}>
-								<td className="w-50 note-title">
-									<p className="content-row">{note.title}</p>
+								<td className="w-25 table-note-title">
+									<p className="align-middle content-row">
+										{note.title}
+									</p>
 								</td>
 								<td className="w-50 first-letter">
-									<p className="content-row note-content">
+									<p className=" align-middle content-row">
 										{note.content}
 									</p>
 								</td>
 								<td className="w-auto">
-									<p className="content-row w-auto note-date">
+									<p className=" content-row align-middle note-date">
 										{moment(note.created_at).format('MM-DD-YYYY')}
 									</p>
 								</td>
 								<td>
-									<ViewNote className="w-auto" note={note} />
+									<ViewNote
+										className="w-auto align-middle "
+										note={note}
+									/>
 								</td>
 								<td>
-									<EditNote className="w-auto" note={note} />
+									<EditNote
+										className="w-auto align-middle "
+										note={note}
+									/>
 								</td>
 								<td>
 									<button
-										className="btn btn-outline-danger text-uppercase w-auto"
+										className="btn btn-outline-danger text-uppercase w-auto align-middle "
 										onClick={() => deleteNote(note.id)}>
 										Delete
 									</button>
