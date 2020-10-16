@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Permanent+Marker&&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Permanent+Marker&family=Nunito&display=swap');
 
 
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fbf7f8;
-  font-family:'Nunito', sans-serif;
+
 }
 
 
@@ -21,6 +19,10 @@ code {
 
 .app-title {
   font-size: 42px;
+}
+
+p {
+  font-family: 'Nunito';
 }
 
 /* View Note */
@@ -71,12 +73,20 @@ code {
   overflow: scroll;
 }
 
+.note-table {
+  font-size: 1.2em;
+}
+
 /* Table-row */
 .first-letter::first-letter {
   font-weight: 900;
-  font-size: 24px;
-  border-bottom: thin solid #800000;
-  padding: auto auto;
+}
+
+.table-note-title {
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Fredericka The Great';
 }
 
 .content-row {
@@ -85,6 +95,7 @@ code {
   text-overflow:ellipsis;
   white-space: nowrap;
   padding-bottom: none;
+  color: #800000;
 }
 
 textarea, td {
@@ -92,7 +103,7 @@ textarea, td {
 }
 
 td {
-  padding: 0;
+  padding: none;
 }
 
 /*  Profile  */
@@ -203,6 +214,7 @@ td {
 }
 
 td {
+  vertical-align: center;
   border-bottom: thin solid #800000;
 }
 
