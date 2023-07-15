@@ -1,15 +1,14 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { FaSpinner } from 'react-icons/fa';
-import '../index.css';
+import './UserGreeting.css';
 
-const Profile = () => {
+const UserGreeting = () => {
 	const { user, isAuthenticated, isLoading } = useAuth0();
 
 	if (isLoading) {
 		return (
-			<div className="spinner">
-				<FaSpinner />
+			<div className="Loader">
+				Loading your profile...
 			</div>
 		);
 	}
@@ -41,4 +40,4 @@ const Profile = () => {
 	);
 };
 
-export default Profile;
+export default UserGreeting;

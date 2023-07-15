@@ -1,18 +1,19 @@
 import React from 'react';
-import LogoutButton from './LogoutButton';
-import '../index.css';
+import LogoutButton from '../LogoutButton';
+import './Navigation.css';
 
-const Navigation = () => {
+const  Navigation = () => {
 	return (
-		<nav className="navbar navbar-expand-lg border-bottom-3 shadow">
+		<nav className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow ">
 			<a
 				href={'/'}
 				className="navbar-brand links"
 				style={{
 					fontFamily: 'Permanent Marker',
-					color: '#800000',
+					fontSize: '48px',
+					color: 'white'
 				}}>
-				Note Collector
+				Notezy
 			</a>
 			<div className="collpase navbar-collapse">
 				<ul className="navbar-nav mr-auto">
@@ -21,9 +22,9 @@ const Navigation = () => {
 							href={'/note'}
 							className="nav-link active links"
 							style={{
-								color: '#800000',
+								color: '#d3d3d3d3',
 							}}>
-							Note
+							Create a note
 						</a>
 					</li>
 					<li className="navbar-item">
@@ -31,9 +32,9 @@ const Navigation = () => {
 							href={'/notes'}
 							className="nav-link links"
 							style={{
-								color: '#800000',
+								color: '#d3d3d3d3',
 							}}>
-							Collections
+							Your Notes
 						</a>
 					</li>
 				</ul>

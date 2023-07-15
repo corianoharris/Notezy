@@ -55,7 +55,7 @@ exports[`renders correctly 1`] = `
     </ul>
   </div>
   <div
-    className="container mt-5 mx-auto spinner text-center"
+    className="container mt-5 mx-auto Loader text-center"
   >
     <svg
       fill="currentColor"
@@ -82,7 +82,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly 2`] = `
 <div
-  className="container mt-5 mx-auto spinner text-center"
+  className="container mt-5 mx-auto Loader text-center"
 >
   <svg
     fill="currentColor"

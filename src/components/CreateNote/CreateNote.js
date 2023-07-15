@@ -1,24 +1,23 @@
 import React, { Fragment, useState } from 'react';
-import '../App.css';
-import '../index.css';
-import { useAuth0 } from '@auth0/auth0-react';
+import "./CreateNote.css";
+// import { useAuth0 } from '@auth0/auth0-react';
 import DOMPurify from 'dompurify';
 
 // components
-import Navigation from './Navigation';
-import Profile from './Profile';
+import  Navigation from '../Navigation';
+import UserGreeting from '../UserGreeting';
 
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
 	const [content, setContent] = useState('');
-	const { user } = useAuth0();
-	const [email] = useState(user.name);
+	// const { user } = useAuth0();
+	// const [email] = useState(user.name);
 
 	const submitNote = async (e) => {
 		e.preventDefault();
 		try {
 			const body = {
-				email,
+				// email,
 				title,
 				content,
 			};
@@ -35,16 +34,12 @@ const CreateNote = () => {
 	};
 	return (
 		<Fragment>
-			<Navigation />
-			<Profile />
+			< Navigation />
+			<UserGreeting />
 			<div
-				className="text-white container rounded w-100 shadow"
-				style={{
-					backgroundColor: 'inherit',
-					padding: '8px',
-				}}>
+				className="text-white container rounded shadow bg-dark mt-4">
 				<form className="mt-5 was-validated" onSubmit={submitNote}>
-					<label className="h3" htmlFor="note-title">
+					<label className="h3 text-white mt-2" htmlFor="note-title">
 						Title
 					</label>
 					<input
@@ -58,10 +53,10 @@ const CreateNote = () => {
 						required
 					/>
 					<div className="valid-feedback mt-2 mb-2">Thank you.</div>
-					<div className="invalid-feedback mt-2 mb-2">
-						Please add a title...
+					<div className="invalid-feedback mt-2 mb-2 text-white">
+						required...
 					</div>
-					<label className="h3" htmlFor="note-content">
+					<label className="h3 text-white mt-1" htmlFor="note-content">
 						Note
 					</label>
 					<textarea
@@ -74,11 +69,11 @@ const CreateNote = () => {
 						onChange={(e) => setContent(e.target.value)}
 						required></textarea>
 					<div className="valid-feedback mt-2 mb-2">Thank you.</div>
-					<div className="invalid-feedback mt-2 mb-2">
-						Please write a note...
+					<div className="invalid-feedback mt-2 mb-2 text-white">
+						required...
 					</div>
-					<div className="text-right m-4">
-						<button className="btn btn-outline-primary">Add</button>
+					<div className="text-right">
+						<button className="btn btn-outline-light m-4">Add</button>
 					</div>
 				</form>
 			</div>

@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     className="navbar-brand"
     href="/"
   >
-    Notsy
+    Notezy
   </a>
   <div
     className="collpase navbar-collapse"
@@ -39,7 +39,7 @@ exports[`renders correctly 1`] = `
     </ul>
   </div>
   <div
-    className="container mt-5 mx-auto spinner text-center"
+    className="container mt-5 mx-auto Loader text-center"
   >
     <svg
       fill="currentColor"

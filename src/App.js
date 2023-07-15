@@ -11,9 +11,9 @@ import {
 import { createBrowserHistory } from 'history';
 
 import CreateNote from './components/CreateNote';
-import ListNotes from './components/ListNotes';
 import Login from './components/Login';
-import Spinner from './components/Spinner';
+import Loader from './components/Loader';
+import DisplayNotes from './components/DisplayNotes';
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
@@ -25,7 +25,7 @@ const history = createBrowserHistory();
 const ProtectedRoute = ({ component, ...args }) => (
 	<Route
 		component={withAuthenticationRequired(component, {
-			onRedirecting: () => <Spinner />,
+			onRedirecting: () => <Loader />,
 		})}
 		{...args}
 	/>
@@ -45,9 +45,9 @@ function App() {
 			onRedirectCallback={onRedirectCallback}>
 			<Router history={history}>
 				<Switch>
-					<Route exact path="/" component={Login} />
+					<Route exact path="/" component={DisplayNotes} />
 					<ProtectedRoute exact path="/note" component={CreateNote} />
-					<ProtectedRoute exact path="/notes" component={ListNotes} />
+					<ProtectedRoute exact path="/notes" component={Login} />
 					<Route
 						render={() => (
 							<h1 className="container w-100 mt-5 mx-auto text-center">
