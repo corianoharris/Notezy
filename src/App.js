@@ -11,9 +11,11 @@ import {
 import { createBrowserHistory } from 'history';
 
 import CreateNote from './components/CreateNote';
-import Login from './components/Login';
+// import Login from './components/Login';
 import Loader from './components/Loader';
 import DisplayNotes from './components/DisplayNotes';
+import PageNotFound from './components/PageNotFound';
+import Login from './components/Login';
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
@@ -41,19 +43,15 @@ function App() {
 		<Auth0Provider
 			domain={domain}
 			clientId={clientId}
-			redirectUri={`${window.location.origin}/note`}
+			redirectUri={`${window.location.origin}/notes`}
 			onRedirectCallback={onRedirectCallback}>
 			<Router history={history}>
 				<Switch>
-					<Route exact path="/" component={DisplayNotes} />
+					<Route exact path="/" component={Login} />
 					<ProtectedRoute exact path="/note" component={CreateNote} />
-					<ProtectedRoute exact path="/notes" component={Login} />
+					<ProtectedRoute exact path="/notes" component={DisplayNotes} />
 					<Route
-						render={() => (
-							<h1 className="container w-100 mt-5 mx-auto text-center">
-								404: page not found
-							</h1>
-						)}
+						component={PageNotFound}
 					/>
 				</Switch>
 			</Router>

@@ -9,13 +9,12 @@ import ViewNote from '../ViewNote';
 import  Navigation from '../Navigation';
 import Loader from '../Loader';
 import NoNotes from '../NoNotes';
+import Footer from '../Footer';
 
 const DisplayNotes = (note) => {
 	const { user } = useAuth0();
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
-
-	//delete report function
 
 	const deleteNote = async (id) => {
 		try {
@@ -59,8 +58,8 @@ const DisplayNotes = (note) => {
 
 	return (
 		<>
-			< Navigation />
-			<h2 className="m-4">Your notes...</h2>
+			<Navigation />
+			<h2 className='text-center text-dark m-4'>Your notes...</h2>
 			 <div className="notes-container p-1">
 				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong'key={note.id}>
 					<p className='note-card-title text-capitalize'>{note.title}</p>
@@ -76,6 +75,7 @@ const DisplayNotes = (note) => {
 				</div>
 				))}
 			</div>
+			<Footer />
 		</>
 	);
 };

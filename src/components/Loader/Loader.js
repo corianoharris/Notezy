@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 
 const Loader = () => {
 	return (
@@ -9,12 +10,12 @@ const Loader = () => {
 						letterSpacing: '6px',
 						lineHeight: '50px',
 						fontSize: '28px',
-
 					}
 				}>
 					Loading your notes...
 				</h2>
 			</div>
+			<Footer />
 		</>
 	);
 };

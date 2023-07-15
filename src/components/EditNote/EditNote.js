@@ -1,14 +1,11 @@
-import React, { Fragment, useState } from 'react';
-import moment from 'moment';
+import React, { useState } from 'react';
 import DOMPurify from 'dompurify';
-import '../App.css';
-import '../index.css';
+import './EditNote.css';
 
 const EditNote = ({ note }) => {
 	const [title, setTitle] = useState(note.title);
 	const [content, setContent] = useState(note.content);
 
-	// console.log(note);
 
 	//edit description function
 	const updateNote = async (e, id, fields) => {
@@ -20,7 +17,6 @@ const EditNote = ({ note }) => {
 				content,
 			};
 
-			console.log(body);
 			const response = await fetch(`/api/notes/${note.id}`, {
 				method: 'PUT',
 				headers: { 'Content-Type': 'application/json' },
@@ -34,37 +30,19 @@ const EditNote = ({ note }) => {
 		}
 	};
 
-	// const submitEditNote = async (e) => {
-	// 	e.preventDefault();
-	// 	try {
-	// 		const body = {
-	// 			title,
-	// 			content,
-	// 		};
-	// 		const response = await fetch('/api/notes', {
-	// 			method: 'POST',
-	// 			headers: { 'Content-Type': 'application/json' },
-	// 			body: JSON.stringify(body),
-	// 		});
-	// 		window.location = '/notes'; // make a api call to db
-	// 	} catch (err) {
-	// 		console.error(err.message);
-	// 	}
-	// };
-
 	return (
-		<Fragment>
+		<>
 			<button
 				type="button"
-				className="btn btn-outline-warning text-uppercase ml-1 mr-1"
+				className="btn btn-outline-secondary text-uppercase ml-1 mr-1"
 				data-toggle="modal"
 				data-target={`#edit${note.id}`}>
 				Edit
 			</button>
-			<div className="modal" id={`edit${note.id}`}>
+			<div className="modal bg-gray fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note.id}`}>
 				<div className="modal-dialog">
-					<div className="modal-content">
-						<div className="modal-header edit-note text-white">
+					<div className="modal-content text-dark">
+						<div className="modal-header bg-dark edit-note">
 							<h4 className="modal-title h3 text-white">Edit Note</h4>
 							<button
 								type="button"
@@ -74,10 +52,10 @@ const EditNote = ({ note }) => {
 							</button>
 						</div>
 
-						<div className="modal-body  text-white view-textarea">
-							<div>
+						<div className="modal-body text-white">
+						<div>
 								<label
-									className="text-left h3  edit-title"
+									className="text-left text-dark  edit-title"
 									htmlFor="title">
 									Title:
 								</label>
@@ -90,11 +68,11 @@ const EditNote = ({ note }) => {
 									onChange={(e) => setTitle(e.target.value)}
 								/>
 							</div>
-						</div>
+							</div>
 						<div className="modal-body text-white view-textarea">
-							<div>
+						<div>
 								<label
-									className="text-left h3 edit-title"
+									className="text-left text-dark edit-title"
 									htmlFor="note">
 									Note:
 								</label>
@@ -108,30 +86,26 @@ const EditNote = ({ note }) => {
 										setContent(e.target.value)
 									}></textarea>
 							</div>
-						</div>
-						<div className="modal-footer text">
-							<p className="content-row w-auto">
-								Modified:{' '}
-								{moment(note.modified_at).format('MM-DD-YYYY')}
-							</p>
+							</div>
+						<div className="modal-footer modal-edit-actions">
 							<button
 								type="button"
-								className="btn btn-outline-warning text-uppercase"
+								className="btn btn-outline-secondary text-uppercase"
 								data-dismiss="modal"
 								onClick={(e) => updateNote(e)}>
-								Edit
+								Update
 							</button>
 							<button
 								type="button"
-								className="btn btn-outline-danger text-uppercase"
+								className="btn btn-outline-dark text-uppercase"
 								data-dismiss="modal">
 								Close
 							</button>
 						</div>
 					</div>
 				</div>
-			</div>
-		</Fragment>
+				</div>
+		</>
 	);
 };
 

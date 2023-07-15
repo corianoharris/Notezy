@@ -1,16 +1,18 @@
 import React from 'react';
 import LogoutButton from '../LogoutButton';
 import './Navigation.css';
+import UserGreeting from '../UserGreeting';
 
 const  Navigation = () => {
 	return (
+		<>
 		<nav className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow ">
 			<a
 				href={'/'}
 				className="navbar-brand links"
 				style={{
 					fontFamily: 'Permanent Marker',
-					fontSize: '48px',
+					fontSize: '36px',
 					color: 'white'
 				}}>
 				Notezy
@@ -20,27 +22,27 @@ const  Navigation = () => {
 					<li className="navbar-item">
 						<a
 							href={'/note'}
-							className="nav-link active links"
-							style={{
-								color: '#d3d3d3d3',
-							}}>
+							className="nav-link active links badge badge-light text-dark p-1"
+					>
 							Create a note
 						</a>
 					</li>
 					<li className="navbar-item">
 						<a
 							href={'/notes'}
-							className="nav-link links"
-							style={{
-								color: '#d3d3d3d3',
-							}}>
+							className="nav-link links badge badge-light text-dark p-1"
+						>
 							Your Notes
 						</a>
 					</li>
 				</ul>
 			</div>
-			<LogoutButton />
-		</nav>
+			<div className='greeting-container'>
+				<UserGreeting />
+				<LogoutButton />
+				</div>
+			</nav>
+		</>
 	);
 };
 

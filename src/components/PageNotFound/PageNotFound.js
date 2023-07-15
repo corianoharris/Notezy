@@ -1,8 +1,7 @@
 import React from 'react';
-import Footer from '../Footer';
-import './NoNotes.css';
+import './PageNotFound.css';
 
-const NoNotes = () => {
+const PageNotFound = () => {
 	return (
 		<>
 			<div className='text-center p-5 mx-auto border-0 login'>
@@ -15,15 +14,11 @@ const NoNotes = () => {
 						fontSize: '28px',
 					}
 			}>
-				You currently don't have any notes. Let's create a {' '}
-				<a className="no-note-link text-dark" href="./note">
-					Note
-				</a>
+				Sorry, page not found. Please try again. 
 				</h2>
-			</div>
-			<Footer />
+				</div>
 		</>
 	);
 };
 
-export default NoNotes;
+export default PageNotFound;

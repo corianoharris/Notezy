@@ -1,23 +1,19 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import "./CreateNote.css";
-// import { useAuth0 } from '@auth0/auth0-react';
 import DOMPurify from 'dompurify';
 
 // components
 import  Navigation from '../Navigation';
-import UserGreeting from '../UserGreeting';
+import Footer from '../Footer';
 
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
 	const [content, setContent] = useState('');
-	// const { user } = useAuth0();
-	// const [email] = useState(user.name);
 
-	const submitNote = async (e) => {
+	const addNote = async (e) => {
 		e.preventDefault();
 		try {
 			const body = {
-				// email,
 				title,
 				content,
 			};
@@ -33,12 +29,13 @@ const CreateNote = () => {
 		}
 	};
 	return (
-		<Fragment>
+		<>
 			< Navigation />
-			<UserGreeting />
+
+			<h2 className='text-center text-dark m-4'>Let's create a note...</h2>
 			<div
 				className="text-white container rounded shadow bg-dark mt-4">
-				<form className="mt-5 was-validated" onSubmit={submitNote}>
+				<form className="mt-5 was-validated" onSubmit>
 					<label className="h3 text-white mt-2" htmlFor="note-title">
 						Title
 					</label>
@@ -73,11 +70,12 @@ const CreateNote = () => {
 						required...
 					</div>
 					<div className="text-right">
-						<button className="btn btn-outline-light m-4">Add</button>
+						<button className="btn btn-outline-light m-4" onClick={addNote}>Add</button>
 					</div>
 				</form>
 			</div>
-		</Fragment>
+			<Footer />
+		</>
 	);
 };
 
