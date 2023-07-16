@@ -35,7 +35,7 @@ const CreateNote = () => {
 			<h2 className='text-center text-dark m-4'>Let's create a note...</h2>
 			<div
 				className="text-white container rounded shadow bg-dark mt-4">
-				<form className="mt-5 was-validated" onSubmit>
+				<form className="mt-5 was-validated" onSubmit={addNote}>
 					<label className="h3 text-white mt-2" htmlFor="note-title">
 						Title
 					</label>
@@ -47,11 +47,12 @@ const CreateNote = () => {
 						name="note"
 						value={DOMPurify.sanitize(title)}
 						onChange={(e) => setTitle(e.target.value)}
+						maxLength={60}
 						required
 					/>
 					<div className="valid-feedback mt-2 mb-2">Thank you.</div>
 					<div className="invalid-feedback mt-2 mb-2 text-white">
-						required...
+						Required field. Max characters is 60. 
 					</div>
 					<label className="h3 text-white mt-1" htmlFor="note-content">
 						Note
@@ -67,7 +68,7 @@ const CreateNote = () => {
 						required></textarea>
 					<div className="valid-feedback mt-2 mb-2">Thank you.</div>
 					<div className="invalid-feedback mt-2 mb-2 text-white">
-						required...
+						Required field.
 					</div>
 					<div className="text-right">
 						<button className="btn btn-outline-light m-4" onClick={addNote}>Add</button>

@@ -17,7 +17,7 @@ const EditNote = ({ note }) => {
 				content,
 			};
 
-			const response = await fetch(`/api/notes/${note.id}`, {
+			const response = await fetch(`/api/notes/1`, {
 				method: 'PUT',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(body),
@@ -39,10 +39,10 @@ const EditNote = ({ note }) => {
 				data-target={`#edit${note.id}`}>
 				Edit
 			</button>
-			<div className="modal bg-gray fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note.id}`}>
+			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-dark edit-note">
+						<div className="modal-header bg-secondary">
 							<h4 className="modal-title h3 text-white">Edit Note</h4>
 							<button
 								type="button"
@@ -61,9 +61,11 @@ const EditNote = ({ note }) => {
 								</label>
 								<input
 									type="text"
-									className="form-control text"
+									className="form-control text input-field"
 									id={`#title${note.id}`}
 									name="title"
+									tabIndex="0"
+									maxLength={60}
 									value={DOMPurify.sanitize(title)}
 									onChange={(e) => setTitle(e.target.value)}
 								/>
@@ -78,13 +80,15 @@ const EditNote = ({ note }) => {
 								</label>
 								<textarea
 									type="text"
-									className="form-control edit text"
+									className="form-control edit text input-field"
 									id={`#content${note.id}`}
 									name="note"
+									tabIndex="0"
 									value={DOMPurify.sanitize(content)}
 									onChange={(e) =>
 										setContent(e.target.value)
-									}></textarea>
+									}
+									></textarea>
 							</div>
 							</div>
 						<div className="modal-footer modal-edit-actions">
@@ -92,7 +96,8 @@ const EditNote = ({ note }) => {
 								type="button"
 								className="btn btn-outline-secondary text-uppercase"
 								data-dismiss="modal"
-								onClick={(e) => updateNote(e)}>
+								onClick={(e) => updateNote(e)}
+								>
 								Update
 							</button>
 							<button

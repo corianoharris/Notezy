@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './ViewNote.css';
+import EditNote from '../EditNote';
 
-const ViewNote = ({ note }) => {
-	const [title] = useState(note.title);
-	const [content] = useState(note.content);
+const ViewNote = () => {
+	// const [title] = useState(note.title);
+	// const [content] = useState(note.content);
 
 	return (
 		<>
@@ -17,8 +18,8 @@ const ViewNote = ({ note }) => {
 			<div className="modal bg-dark fade view-note" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-dark view-note">
-							<h4 className="modal-title h3 text-white">View Note</h4>
+						<div className="modal-header bg-secondary">
+							<h4 className="modal-title">View Note</h4>
 							<button
 								type="button"
 								className="close text-uppercase text-white"
@@ -30,31 +31,34 @@ const ViewNote = ({ note }) => {
 						<div className="modal-body text-white view-textarea">
 							<div>
 								<label
-									className="text-left text-dark  view-title"
-									htmlFor="title">
+									className="text-left text-dark view-title"
+									htmlFor="title"
+									>
 									Title:
 								</label>
 								<p
 									type="text"
-									className="view-note"
-									name="title">
-									{title}
+									className=" text-left text-dark input-field"
+									name="title"
+									tabIndex="0">
+								title
 								</p>
 							</div>
 						</div>
 						<div className="modal-body text-white view-textarea">
 							<div>
 								<label
-									className="text-left h3 text-dark"
+									className="text-left text-dark"
 									htmlFor="note">
 									Note:
 								</label>
 								<p
 									type="text"
-									className="text view-note "
+									className="text text-dark input-field"
 
-									name="note">
-									{content}
+									name="note"
+									tabIndex="0">
+									content
 								</p>
 							</div>
 						</div>
