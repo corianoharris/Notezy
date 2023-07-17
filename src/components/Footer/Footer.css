@@ -1,6 +1,6 @@
 
 .footer {
-  padding-inline-start: absolute;
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
