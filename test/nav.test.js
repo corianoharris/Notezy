@@ -1,5 +1,5 @@
 import React from 'react';
-import  Navigation from '../src/components/ Navigation';
+import  Navigation from '../src/components/Navigation';
 import LogoutButton from '../src/components/LogoutButton';
 import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
