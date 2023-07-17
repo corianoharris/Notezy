@@ -3,8 +3,8 @@ import DOMPurify from 'dompurify';
 import './EditNote.css';
 
 const EditNote = ({ note }) => {
-	const [title, setTitle] = useState(note.title);
-	const [content, setContent] = useState(note.content);
+	const [title, setTitle] = useState(note?.title);
+	const [content, setContent] = useState(note?.content);
 
 
 	//edit description function

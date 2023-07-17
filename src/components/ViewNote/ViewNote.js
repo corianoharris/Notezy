@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './ViewNote.css';
 
 const ViewNote = ({note}) => {
-	const [title] = useState(note.title);
-	const [content] = useState(note.content);
+	const [title] = useState(note?.title);
+	const [content] = useState(note?.content);
 
 	return (
 		<>
