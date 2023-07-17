@@ -29,7 +29,6 @@
 
 .greeting-container {
   position: absolute;
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;

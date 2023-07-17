@@ -5,28 +5,32 @@ exports[`renders correctly 1`] = `
   className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow "
 >
   <div
-    className="brand-link"
-  >
-    <img
-      alt="notebook icon"
-      className="branding-image"
-      src="test-file-stub"
-    />
-     
-     
-    <a
-      className="navbar-brand link-underline-light link-underline-opacity-100-hover"
-      href="/"
-    >
-      Notezy
-    </a>
-  </div>
-  <div
     className="collpase navbar-collapse"
   >
     <ul
       className="navbar-nav mr-auto mt-2"
     >
+      <li
+        className="navbar-item"
+      >
+        <div
+          className="brand-link"
+        >
+          <img
+            alt="notebook icon"
+            className="branding-image"
+            src="test-file-stub"
+          />
+           
+           
+          <a
+            className="navbar-brand link-underline-light link-underline-opacity-100-hover"
+            href="/"
+          >
+            Notezy
+          </a>
+        </div>
+      </li>
       <li
         className="navbar-item"
       >
