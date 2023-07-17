@@ -81,7 +81,7 @@ const EditNote = ({ note }) => {
 								<textarea
 									type="text"
 									className="form-control edit text input-field"
-									id={`#content${note.id}`}
+									id={`#content${note?.id}`}
 									name="note"
 									tabIndex="0"
 									value={DOMPurify.sanitize(content)}
