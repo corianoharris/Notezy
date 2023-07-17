@@ -7,19 +7,27 @@ import '@testing-library/jest-dom';
 
 // react test renderer to test ui
 it('renders correctly', () => {
-	const nav = renderer.create(<Navigation />).toJSON();
+	const nav = renderer.create(< Navigation />).toJSON();
 	const logout = renderer.create(<LogoutButton />).toJSON();
 	expect(nav).toMatchSnapshot();
 	expect(logout).toMatchSnapshot();
 });
 
 // testing-library/react ti test nav links
-test('renders collectins link', () => {
-	const { getByText } = render(<Navigation />);
-	const linkElement = getByText(
-		/Note Collector/i,
-		/Note/i,
-		/Collections/i
+test('renders nav links', () => {
+	const { getByText } = render(< Navigation />);
+	const NotezyLinkText = getByText(
+		/Notezy/i,
 	);
-	expect(linkElement).toBeInTheDocument();
+	const CreateANoteLinkText = getByText(
+		/Create a note/i,
+	);
+	const YourNotesLInkText = getByText(
+
+		/Your notes/i,
+	);
+
+	expect(NotezyLinkText).toBeInTheDocument();
+	expect(CreateANoteLinkText).toBeInTheDocument();
+	expect(YourNotesLInkText).toBeInTheDocument();
 });

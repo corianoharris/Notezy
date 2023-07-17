@@ -1,0 +1,15 @@
+.logout-button-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .logout-button-container {
+    width: auto;
+    margin-bottom: none;
+  }
+}

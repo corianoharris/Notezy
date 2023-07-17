@@ -1,0 +1,26 @@
+
+.modal-background {
+  background-color: black;
+  opacity: .7;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.input-field {
+  padding: 10px 8px;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+
+.modal-edit-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  text-shadow: none;
+}

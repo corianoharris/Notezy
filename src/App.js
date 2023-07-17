@@ -1,8 +1,6 @@
 import React from 'react';
-
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Router, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
 	Auth0Provider,
@@ -11,9 +9,10 @@ import {
 import { createBrowserHistory } from 'history';
 
 import CreateNote from './components/CreateNote';
-import ListNotes from './components/ListNotes';
+import DisplayNotes from './components/DisplayNotes';
+import PageNotFound from './components/PageNotFound';
 import Login from './components/Login';
-import Spinner from './components/Spinner';
+import ProtectedPageLoader from './components/ProtectedPageLoader';
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
@@ -25,7 +24,7 @@ const history = createBrowserHistory();
 const ProtectedRoute = ({ component, ...args }) => (
 	<Route
 		component={withAuthenticationRequired(component, {
-			onRedirecting: () => <Spinner />,
+			onRedirecting: () => <ProtectedPageLoader />,
 		})}
 		{...args}
 	/>
@@ -41,19 +40,15 @@ function App() {
 		<Auth0Provider
 			domain={domain}
 			clientId={clientId}
-			redirectUri={`${window.location.origin}/note`}
+			redirectUri={`${window.location.origin}/notes`}
 			onRedirectCallback={onRedirectCallback}>
 			<Router history={history}>
 				<Switch>
 					<Route exact path="/" component={Login} />
 					<ProtectedRoute exact path="/note" component={CreateNote} />
-					<ProtectedRoute exact path="/notes" component={ListNotes} />
-					<Route
-						render={() => (
-							<h1 className="container w-100 mt-5 mx-auto text-center">
-								404: page not found
-							</h1>
-						)}
+					<ProtectedRoute exact path="/notes" component={DisplayNotes} />
+					<Route path="*"
+						component={PageNotFound}
 					/>
 				</Switch>
 			</Router>

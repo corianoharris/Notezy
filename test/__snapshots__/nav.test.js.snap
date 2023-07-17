@@ -2,106 +2,116 @@
 
 exports[`renders correctly 1`] = `
 <nav
-  className="navbar navbar-expand-lg border-bottom-3 shadow"
+  className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow "
 >
-  <a
-    className="navbar-brand links"
-    href="/"
-    style={
-      Object {
-        "color": "#800000",
-        "fontFamily": "Permanent Marker",
-      }
-    }
+  <div
+    className="brand-link"
   >
-    Note Collector
-  </a>
+    <img
+      alt="notebook icon"
+      className="branding-image"
+      src="test-file-stub"
+    />
+     
+     
+    <a
+      className="navbar-brand link-underline-light link-underline-opacity-100-hover"
+      href="/"
+    >
+      Notezy
+    </a>
+  </div>
   <div
     className="collpase navbar-collapse"
   >
     <ul
-      className="navbar-nav mr-auto"
+      className="navbar-nav mr-auto mt-2"
     >
       <li
         className="navbar-item"
       >
         <a
-          className="nav-link active links"
+          className="nav-link active link-underline-light link-underline-opacity-100-hover"
           href="/note"
-          style={
-            Object {
-              "color": "#800000",
-            }
-          }
         >
-          Note
+           Create a note
         </a>
       </li>
       <li
         className="navbar-item"
       >
         <a
-          className="nav-link links"
+          className="nav-link link-underline-light link-underline-opacity-100-hover"
           href="/notes"
-          style={
-            Object {
-              "color": "#800000",
-            }
-          }
         >
-          Collections
+          Your notes
         </a>
       </li>
     </ul>
   </div>
   <div
-    className="container mt-5 mx-auto spinner text-center"
+    className="greeting-container"
   >
-    <svg
-      fill="currentColor"
-      height={70}
-      size={70}
-      stroke="currentColor"
-      strokeWidth="0"
-      style={
-        Object {
-          "color": undefined,
-        }
-      }
-      viewBox="0 0 512 512"
-      width={70}
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="Loader"
     >
-      <path
-        d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
-      />
-    </svg>
+      Loading your greeting...
+    </div>
+    <div
+      className="text-center p-5 mx-auto border-0 login"
+    >
+      <h2
+        className="container w-100 mt-5 mx-auto text-center "
+      >
+        Getting your page...
+      </h2>
+    </div>
+    <div
+      className="footer text-dark mt-2"
+    >
+      <h6>
+        authored by
+         
+        <span>
+          <a
+            className="footer-link badge badge-light"
+            href="https://www.corianoharris.com"
+          >
+            Coriano Harris
+          </a>
+        </span>
+      </h6>
+    </div>
   </div>
 </nav>
 `;
 
 exports[`renders correctly 2`] = `
-<div
-  className="container mt-5 mx-auto spinner text-center"
->
-  <svg
-    fill="currentColor"
-    height={70}
-    size={70}
-    stroke="currentColor"
-    strokeWidth="0"
-    style={
-      Object {
-        "color": undefined,
-      }
-    }
-    viewBox="0 0 512 512"
-    width={70}
-    xmlns="http://www.w3.org/2000/svg"
+Array [
+  <div
+    className="text-center p-5 mx-auto border-0 login"
   >
-    <path
-      d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
-    />
-  </svg>
-</div>
+    <h2
+      className="container w-100 mt-5 mx-auto text-center "
+    >
+      Getting your page...
+    </h2>
+  </div>,
+  <div
+    className="footer text-dark mt-2"
+  >
+    <h6>
+      authored by
+       
+      <span>
+        <a
+          className="footer-link badge badge-light"
+          href="https://www.corianoharris.com"
+        >
+          Coriano Harris
+        </a>
+      </span>
+    </h6>
+  </div>,
+]
 `;

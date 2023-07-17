@@ -1,6 +1,6 @@
 # Title / Repository Name
 
-Note Collector
+Notezy
 
 ## Badges
 
