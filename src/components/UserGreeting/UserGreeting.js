@@ -16,7 +16,7 @@ const UserGreeting = () => {
 	return (
 		<>
 			{isAuthenticated && (
-				<div className="container mt-3 d-flex align-items-center border-bottom">
+				<div className=" mt-3 d-flex align-items-center border-bottom">
 					<div className="intro mt-2 mb-2">
 						<div className="profile-text">
 						<img
