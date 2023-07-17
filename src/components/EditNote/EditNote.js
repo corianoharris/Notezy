@@ -45,10 +45,10 @@ const EditNote = ({ note }) => {
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
 						<div className="modal-header bg-light">
-							<h4 className="modal-title h3 text-white">Edit Note</h4>
+							<h4 className="modal-title">Edit Note</h4>
 							<button
 								type="button"
-								className="close text-uppercase text-white"
+								className="close text-uppercase text-dark"
 								data-dismiss="modal">
 								&times;
 							</button>

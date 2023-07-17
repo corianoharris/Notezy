@@ -21,7 +21,7 @@ const ViewNote = ({note}) => {
 							<h4 className="modal-title">View Note</h4>
 							<button
 								type="button"
-								className="close text-uppercase text-white"
+								className="close text-uppercase text-dark"
 								data-dismiss="modal">
 								&times;
 							</button>

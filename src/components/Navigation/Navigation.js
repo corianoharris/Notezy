@@ -8,6 +8,11 @@ const Navigation = () => {
 	return (
 		<>
 			<nav className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow ">
+			
+				<div className="collpase navbar-collapse">
+					<ul className="navbar-nav mr-auto mt-2">
+
+					<li className="navbar-item">	
 				<div className="brand-link">
 					<img className='branding-image' src={brandLogo} alt='notebook icon' /> {' '}
 
@@ -16,9 +21,8 @@ const Navigation = () => {
 						className="navbar-brand link-underline-light link-underline-opacity-100-hover">
 						Notezy
 					</a>
-				</div>
-				<div className="collpase navbar-collapse">
-					<ul className="navbar-nav mr-auto mt-2">
+							</div>
+							</li>	
 						<li className="navbar-item">
 							<a
 								href={'/note'}
@@ -34,8 +38,8 @@ const Navigation = () => {
 								Your notes
 							</a>
 						</li>
-					</ul>
-				</div>
+						</ul>
+						</div>
 				<div className='greeting-container'>
 					<UserGreeting />
 					<LogoutButton />

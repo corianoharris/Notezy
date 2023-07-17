@@ -14,6 +14,7 @@ import PageNotFound from './components/PageNotFound';
 import Login from './components/Login';
 import ProtectedPageLoader from './components/ProtectedPageLoader';
 
+
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
