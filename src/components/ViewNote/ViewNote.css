@@ -4,6 +4,10 @@
   opacity: .7;
 }
 
+.modal-dialog {
+  margin-top: 30px;
+}
+
 .modal-header {
   font-weight: 800;
   border-bottom: 1px solid black;
@@ -21,7 +25,6 @@
 
 .input-field {
   padding: 10px 8px;
-  background-color: lightgrey;
   border-radius: 4px;
 }
 

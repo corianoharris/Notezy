@@ -17,11 +17,11 @@ const ViewNote = ({note}) => {
 			<div className="modal bg-dark fade view-note" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-light">
+						<div className="modal-header bg-dark text-white">
 							<h4 className="modal-title">View Note</h4>
 							<button
 								type="button"
-								className="close text-uppercase text-dark"
+								className="close text-uppercase text-white"
 								data-dismiss="modal">
 								&times;
 							</button>
@@ -37,7 +37,7 @@ const ViewNote = ({note}) => {
 								</label>
 								<p
 									type="text"
-									className=" text-left text-dark input-field"
+									className=" text-left bg-light text-dark input-field"
 									name="title"
 									tabIndex="0">
 								{title}
@@ -53,7 +53,7 @@ const ViewNote = ({note}) => {
 								</label>
 								<p
 									type="text"
-									className="text text-dark input-field"
+									className="text bg-light text-dark input-field"
 
 									name="note"
 									tabIndex="0">

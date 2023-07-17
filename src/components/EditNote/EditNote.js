@@ -44,11 +44,11 @@ const EditNote = ({ note }) => {
 			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note?.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-light">
-							<h4 className="modal-title">Edit Note</h4>
+						<div className="modal-header bg-dark text-white">
+							<h4 className="modal-title text-light">Edit Note</h4>
 							<button
 								type="button"
-								className="close text-uppercase text-dark"
+								className="close text-uppercase text-white"
 								data-dismiss="modal">
 								&times;
 							</button>
@@ -57,7 +57,7 @@ const EditNote = ({ note }) => {
 						<div className="modal-body text-white">
 						<div>
 								<label
-									className="text-left text-dark  edit-title"
+									className="text-left text-dark bg-light edit-title"
 									htmlFor="title">
 									Title:
 								</label>
@@ -82,7 +82,7 @@ const EditNote = ({ note }) => {
 								</label>
 								<textarea
 									type="text"
-									className="form-control edit text input-field"
+									className="form-control bg-light edit text input-field"
 									id={`#content${note?.id}`}
 									name="note"
 									tabIndex="0"
