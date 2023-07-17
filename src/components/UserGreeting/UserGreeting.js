@@ -19,7 +19,11 @@ const UserGreeting = () => {
 				<div className="container mt-3 d-flex align-items-center border-bottom">
 					<div className="intro mt-2 mb-2">
 						<div className="profile-text">
-							<h3 className="profile-user text-white">{user.picture}</h3>
+						<img
+					className="profile-user profile-image"
+					src={user.picture}
+					alt={user.name}
+				/>
 					</div>
 				</div>
 			</div>
