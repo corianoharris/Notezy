@@ -17,7 +17,7 @@ const ViewNote = ({note}) => {
 			<div className="modal bg-dark fade view-note" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-secondary">
+						<div className="modal-header bg-light">
 							<h4 className="modal-title">View Note</h4>
 							<button
 								type="button"

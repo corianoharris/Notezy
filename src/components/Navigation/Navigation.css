@@ -1,6 +1,8 @@
 .navbar {
   align-items: center;
   padding-bottom: 30px;
+  width: 100vw;
+  height: 200px;
 }
 
 .navbar-brand {
@@ -9,14 +11,12 @@
 
 .nav-link {
   padding-bottom: 5px;
-  border-bottom: 1px solid grey;
-  width: 160px;
+  width: auto;
 }
 
 .nav-link:hover {
   font-weight: 700;
   padding-bottom: 5px;
-  border-bottom: 1px solid white;
 }
 
 .active {

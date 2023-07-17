@@ -23,7 +23,9 @@ const EditNote = ({ note }) => {
 				body: JSON.stringify(body),
 			});
 
-			console.log(response);
+			if (response) {
+				console.log("success")
+			} else console.log("error")
 			window.location = '/notes'; // make a api call
 		} catch (err) {
 			console.error(err.message);
@@ -42,7 +44,7 @@ const EditNote = ({ note }) => {
 			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note?.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-secondary">
+						<div className="modal-header bg-light">
 							<h4 className="modal-title h3 text-white">Edit Note</h4>
 							<button
 								type="button"
