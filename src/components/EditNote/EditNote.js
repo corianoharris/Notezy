@@ -12,12 +12,12 @@ const EditNote = ({ note }) => {
 		e.preventDefault();
 		try {
 			const body = {
-				id: note.id,
+				id: note?.id,
 				title,
 				content,
 			};
 
-			const response = await fetch(`/api/notes/${note.id}`, {
+			const response = await fetch(`/api/notes/${note?.id}`, {
 				method: 'PUT',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(body),
@@ -36,10 +36,10 @@ const EditNote = ({ note }) => {
 				type="button"
 				className="btn btn-outline-secondary text-uppercase ml-1 mr-1"
 				data-toggle="modal"
-				data-target={`#edit${note.id}`}>
+				data-target={`#edit${note?.id}`}>
 				Edit
 			</button>
-			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note.id}`}>
+			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit${note?.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
 						<div className="modal-header bg-secondary">
@@ -62,7 +62,7 @@ const EditNote = ({ note }) => {
 								<input
 									type="text"
 									className="form-control text input-field"
-									id={`#title${note.id}`}
+									id={`#title${note?.id}`}
 									name="title"
 									tabIndex="0"
 									maxLength={60}
