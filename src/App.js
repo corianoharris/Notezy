@@ -14,8 +14,6 @@ import PageNotFound from './components/PageNotFound';
 import Login from './components/Login';
 import ProtectedPageLoader from './components/ProtectedPageLoader';
 
-import Navigation from './components/Navigation';
-
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
@@ -46,7 +44,7 @@ function App() {
 			onRedirectCallback={onRedirectCallback}>
 			<Router history={history}>
 				<Switch>
-					<Route exact path="/" component={Navigation} />
+					<Route exact path="/" component={Login} />
 					<ProtectedRoute exact path="/note" component={CreateNote} />
 					<ProtectedRoute exact path="/notes" component={DisplayNotes} />
 					<Route path="*"
