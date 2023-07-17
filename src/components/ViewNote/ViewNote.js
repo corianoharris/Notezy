@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './ViewNote.css';
-import EditNote from '../EditNote';
 
-const ViewNote = () => {
-	// const [title] = useState(note.title);
-	// const [content] = useState(note.content);
+const ViewNote = ({note}) => {
+	const [title] = useState(note.title);
+	const [content] = useState(note.content);
 
 	return (
 		<>
@@ -41,7 +40,7 @@ const ViewNote = () => {
 									className=" text-left text-dark input-field"
 									name="title"
 									tabIndex="0">
-								title
+								{title}
 								</p>
 							</div>
 						</div>
@@ -58,7 +57,7 @@ const ViewNote = () => {
 
 									name="note"
 									tabIndex="0">
-									content
+									{content}
 								</p>
 							</div>
 						</div>

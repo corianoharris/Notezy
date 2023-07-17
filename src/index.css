@@ -1,352 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Permanent+Marker&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-
+* {
+  font-family: 'Quicksand','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
 
 body {
   margin: 0;
-  font-family:'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fbf7f8;
-
+  line-height: 150%;
+  letter-spacing: 4px;
+  font-size: 16px;
 }
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-size: 3rem;
 }
 
-.app-title {
-  font-size: 42px;
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 p {
-  font-family: 'Nunito';
+  font-size: .75rem;
 }
 
-/* View Note */
+@media screen and (min-width: 760px ) {
 
-.view {
-  max-height: 400px;
-  overflow: scroll;
-}
-
-/* Edit Note */
-
-.edit {
-  width: 100%;
-  max-height: 80%;
-  overflow: scroll;
-  padding: 5px;
-  color: #800000;
-  border: none;
-}
-
-.edit:focus {
-  outline: none;
-}
-
-/* Note Title */
-#note-title {
-  border: none;
-  outline: none;
-  padding :none;
-}
-
-
-/* Note textarea */
-#note-content {
-  border: none;
-  outline: none;
-  padding :none;
-  height: 20vh;
-  overflow: scroll;
-}
-
-#note-content:focus, #note-title:focus {
-  outline: inherit;
-}
-
-#note-item {
-  height: 30vh;
-  overflow: scroll;
-}
-
-.note-table {
-  font-size: 1.2em;
-}
-
-/* Table-row */
-.first-letter::first-letter {
-  font-weight: 900;
-}
-
-.table-note-title {
-  font-weight: 900;
-  font-style: italic;
-  text-transform: uppercase;
-  font-family: 'Fredericka The Great';
-}
-
-.content-row {
-  max-width: 450px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
-  padding-bottom: none;
-  color: #800000;
-}
-
-textarea, td {
-  letter-spacing: 2px;
-}
-
-td {
-  padding: none;
-}
-
-/*  Profile  */
-.profile-image {
-  width: 36px;
-  height: 36px;
-}
-
-/* nav */
-
-.nav-icon {
-  font-size: 1rem;
-  margin-right: 5px;
-}
-
-.links:hover,.links:focus{
-  color: #efd5df;
-  font-weight: bolder;
-}
-
-/* welcome */
-
-
-
-/* intro */
-
-.intro {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-}
-
-.profile-text{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-}
-
-.profile-welcome {
-  font-size: 10px;
-}
-
-.profile-user {
-  font-size: 13px;
-  margin-left: 5px;
-  background: #fff;
-  border-radius: 3px;
-  padding: 5px 10px;
-}
-
-/* login */
-
- .login {
-  margin: 50% auto;
-  width: 90%;
-  height: 20%;
-}
-
-/* Loader */
-.Loader {
-  width: 80px;
-  height: 80px;
-  pointer-events: none;
-  fill: #800000;
-}
-
-/* Icon */
-.icon {
-  font-size: 40px;
-}
-
-/* label */
-
-.h3 {
-  color: #800000;
-  font-family: 'Fredericka The Great', cursive;
-  font-weight: bolder;
-
-}
-
-/* Input */
-
-.input {
-  font-weight: 300;
-}
-
-/* Table */
-
-.note-table {
-  color: #800000;
-  background: inherit;
-}
-
-.th {
-  background: #800000;
-}
-
-.note-title {
-  font-size: 1.25em;
-  font-weight: 600;
-  font-style: italic;
-  text-transform: uppercase;
-  color: #800000;
-  font-family: 'Fredericka The Great';
-}
-
-td {
-  vertical-align: center;
-  border-bottom: thin solid #800000;
-}
-
-.note-content {
-  color: #800000;
-  font-weight: 300;
-}
-
-.note-date {
-  font-weight: 700;
-  color: #800000;
-}
-
-/* Edit Note */
-
-.edit-title, .text {
-  color: #800000;
-}
-
-.edit-note {
-  background: #800000;
-}
-
-
-/* View Note */
-
-.view-note  {
-  color: #800000;
-}
-
-/* No Note */
-
-.no-note-link, .no-note-link:active, .no-note-link:focus {
-  font-family: 'Fredericka The Great', cursive;
-  font-weight: bold;
-  color: #d3d3d3;
-}
-
-.no-note-link:hover {
-  color:  black;
-  text-decoration: none;
-  border-bottom: medium solid black;
-}
-
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .Loader {
-    animation: Loader-spin infinite 5s linear;
+  h1 {
+    font-size: 3rem;
   }
-}
-
-@keyframes Loader-spin {
-  from {
-    transform: rotate(0deg);
+  
+  h2 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media(min-width:481px) {
-
-  .profile-welcome {
-    font-size: 14px;
+  
+  h3 {
+    font-size: 1.5rem;
   }
 
-  .profile-user {
-    font-size: 20px;
+  p {
+    font-size: 1rem;
   }
-
-  .profile-image {
-  width: 40px;
-  height: 40px;
-  }
-}
-
-
-
-@media(min-width:641px) {
-  .login {
-    margin: 35%;
-  }
-
-  .profile-welcome {
-    font-size: 18px;
-  }
-
-  .profile-user {
-    font-size: 24px;
-  }
-
-  .profile-image {
-  width: 60px;
-  height: 60px;
-  }
-
-  .login {
-  width: 80%;
-}
-}
-
-@media(min-width: 981px) {
-  .login {
-        margin: 15%;
-  }
-
-   .profile-welcome {
-    font-size: 28px;
-  }
-
-  .profile-user {
-    font-size: 32px;
-  }
-
-  .profile-image {
-  width: 70px;
-  height: 70px;
-  }
-
-  .intro {
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  }
-
-  .h1 {
-    font-size: 60px;
-  }
-
-  .login {
-  width: 40%;
-}
-
 }

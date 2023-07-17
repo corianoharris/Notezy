@@ -17,7 +17,7 @@ const EditNote = ({ note }) => {
 				content,
 			};
 
-			const response = await fetch(`/api/notes/1`, {
+			const response = await fetch(`/api/notes/${note.id}`, {
 				method: 'PUT',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(body),

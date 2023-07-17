@@ -7,7 +7,7 @@ import "./DisplayNotes.css";
 import EditNote from '../EditNote';
 import ViewNote from '../ViewNote';
 import  Navigation from '../Navigation';
-import Loader from '../Loader';
+import SkeletonLoader from '../SkeletonLoader/SkeletonLoader';
 import NoNotes from '../NoNotes';
 import Footer from '../Footer';
 
@@ -49,7 +49,7 @@ const DisplayNotes = (note) => {
 	};
 
 	if (isLoading) {
-		return <Loader />;
+		return <SkeletonLoader />;
 	}
 
 	if (!notes || notes.length === 0) {

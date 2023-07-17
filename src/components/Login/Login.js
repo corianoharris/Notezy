@@ -8,22 +8,14 @@ const Login = () => {
 	return (
 		<>
 			<div
-				className="text-center p-5 mx-auto border-0 login"
+				className="text-center border-0 login"
 				>
 				<h1
-					className="app-title"
-					style={{
-						fontFamily:'Permanent Marker',
-						fontSize: '80px',
-						letterSpacing: '20px',
-					}}>
-					Notezy
+					className="login-header"
+				>Notezy
 				</h1>
 				<button
 					className="btn btn-outline-dark btn-lg"
-					style={{
-						textTransform: 'uppercase',
-					}}
 					onClick={() => loginWithRedirect()}>
 					Enter
 				</button>

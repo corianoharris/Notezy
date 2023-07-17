@@ -1,8 +1,6 @@
 import React from 'react';
-
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Router, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
 	Auth0Provider,
@@ -11,11 +9,12 @@ import {
 import { createBrowserHistory } from 'history';
 
 import CreateNote from './components/CreateNote';
-// import Login from './components/Login';
-import Loader from './components/Loader';
 import DisplayNotes from './components/DisplayNotes';
 import PageNotFound from './components/PageNotFound';
 import Login from './components/Login';
+import ProtectedPageLoader from './components/ProtectedPageLoader';
+
+import Navigation from './components/Navigation';
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
@@ -27,7 +26,7 @@ const history = createBrowserHistory();
 const ProtectedRoute = ({ component, ...args }) => (
 	<Route
 		component={withAuthenticationRequired(component, {
-			onRedirecting: () => <Loader />,
+			onRedirecting: () => <ProtectedPageLoader />,
 		})}
 		{...args}
 	/>
@@ -47,10 +46,10 @@ function App() {
 			onRedirectCallback={onRedirectCallback}>
 			<Router history={history}>
 				<Switch>
-					<Route exact path="/" component={Login} />
+					<Route exact path="/" component={Navigation} />
 					<ProtectedRoute exact path="/note" component={CreateNote} />
 					<ProtectedRoute exact path="/notes" component={DisplayNotes} />
-					<Route
+					<Route path="*"
 						component={PageNotFound}
 					/>
 				</Switch>
