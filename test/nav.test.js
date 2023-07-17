@@ -1,5 +1,5 @@
 import React from 'react';
-import  Navigation from '../src/components/Navigation';
+import Navigation from '../src/components/Navigation';
 import LogoutButton from '../src/components/LogoutButton';
 import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
@@ -14,11 +14,20 @@ it('renders correctly', () => {
 });
 
 // testing-library/react ti test nav links
-test('renders collectins link', () => {
+test('renders nav links', () => {
 	const { getByText } = render(< Navigation />);
-	const linkElement = getByText(
-		/Create a note/i,
-		/Your notes/i
+	const NotezyLinkText = getByText(
+		/Notezy/i,
 	);
-	expect(linkElement).toBeInTheDocument();
+	const CreateANoteLinkText = getByText(
+		/Create a note/i,
+	);
+	const YourNotesLInkText = getByText(
+
+		/Your notes/i,
+	);
+
+	expect(NotezyLinkText).toBeInTheDocument();
+	expect(CreateANoteLinkText).toBeInTheDocument();
+	expect(YourNotesLInkText).toBeInTheDocument();
 });
