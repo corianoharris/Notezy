@@ -11,7 +11,7 @@ import SkeletonLoader from '../SkeletonLoader/SkeletonLoader';
 import NoNotes from '../NoNotes';
 import Footer from '../Footer';
 
-const DisplayNotes = (note) => {
+const DisplayNotes = () => {
 	const { user } = useAuth0();
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
@@ -67,8 +67,8 @@ const DisplayNotes = (note) => {
 					<p className='note-card-status-dates text-lowercase'>{`date modifier: ${moment(note.modified_at).format('MM-DD-YYYY')}`}</p>
 					<div className='note-card-actions'>
 						<div className='note-card-view-edit-action text-uppercase'>
-							<ViewNote />
-							<EditNote />
+							<ViewNote note={note}/>
+							<EditNote note={note}/>
 						</div>
 						<button className='btn btn-outline-danger button-delete' onClick={() => deleteNote(note)}>Delete</button>
 					</div>

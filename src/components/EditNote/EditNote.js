@@ -23,7 +23,9 @@ const EditNote = ({ note }) => {
 				body: JSON.stringify(body),
 			});
 
-			console.log(response);
+			if (response) {
+				console.log("success")
+			} else console.log("error")
 			window.location = '/notes'; // make a api call
 		} catch (err) {
 			console.error(err.message);
