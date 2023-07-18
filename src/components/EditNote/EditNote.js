@@ -10,12 +10,10 @@ const EditNote = ({ note }) => {
 
 	//edit description function
 	const updateNote = async (e, id, fields) => {
-		id = note?.id
 		setModifiedAt(new Date());
 		e.preventDefault();
 		try {
 			const body = {
-				id,
 				title,
 				content,
 				modified_at: modifiedAt,
