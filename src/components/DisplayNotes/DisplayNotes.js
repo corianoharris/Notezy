@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import { useAuth0 } from '@auth0/auth0-react';
 import "./DisplayNotes.css";
