@@ -25,14 +25,14 @@ const Navigation = () => {
 							</li>	
 						<li className="navbar-item">
 							<a
-								href={'/note'}
+								href={'/createanote'}
 								className="nav-link active link-underline-light link-underline-opacity-100-hover"
 							> Create a note
 							</a>
 						</li>
 						<li className="navbar-item">
 							<a
-								href={'/notes'}
+								href={'/yournotes'}
 								className="nav-link link-underline-light link-underline-opacity-100-hover"
 							>
 								Your notes
