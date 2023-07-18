@@ -35,9 +35,10 @@ const DisplayNotes = () => {
 			method: 'GET',
 		});
 		const jsonData = await response.json();
-		const email = () =>
+		const userNotes = () =>
 			jsonData.filter((note) => note.email === user.name);
-		setNotes(email);
+		console.log('user notes: ', userNotes);
+		setNotes(userNotes);
 		setLoading(false);
 	}, [user.name])
 

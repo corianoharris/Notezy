@@ -11,10 +11,10 @@ const ViewNote = ({note}) => {
 				type="button"
 				className="btn btn-outline-secondary text-uppercase ml-1 mr-1"
 				data-toggle="modal"
-				data-target=".view-note">
+				data-target={`#view${note?.id}`}>
 				View
 			</button>
-			<div className="modal bg-dark fade view-note" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div className="modal bg-dark fade view-note" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`#view${note?.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
 						<div className="modal-header bg-dark text-white">
@@ -39,6 +39,7 @@ const ViewNote = ({note}) => {
 									type="text"
 									className=" text-left bg-light text-dark input-field"
 									name="title"
+									id={`#title${note?.id}`}
 									tabIndex="0">
 								{title}
 								</p>
@@ -54,8 +55,8 @@ const ViewNote = ({note}) => {
 								<p
 									type="text"
 									className="text bg-light text-dark input-field"
-
 									name="note"
+									id={`#content${note?.id}`}
 									tabIndex="0">
 									{content}
 								</p>
