@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./CreateNote.css";
 import DOMPurify from 'dompurify';
+import { useAuth0 } from '@auth0/auth0-react';
 
 // components
 import  Navigation from '../Navigation';
@@ -9,11 +10,14 @@ import Footer from '../Footer';
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
 	const [content, setContent] = useState('');
+	const { user } = useAuth0();
+	const [email] = useState(user.name);
 
 	const addNote = async (e) => {
 		e.preventDefault();
 		try {
 			const body = {
+				email,
 				title,
 				content,
 			};
