@@ -5,6 +5,7 @@ import './EditNote.css';
 const EditNote = ({ note }) => {
 	const [title, setTitle] = useState(note?.title);
 	const [content, setContent] = useState(note?.content);
+	const [modified_at, setModified_at] = useState(note?.modified_at);
 
 
 	//edit description function
@@ -15,6 +16,7 @@ const EditNote = ({ note }) => {
 				id: note?.id,
 				title,
 				content,
+				modified_at: new Date(),
 			};
 
 			const response = await fetch(`/api/notes/${note?.id}`, {
