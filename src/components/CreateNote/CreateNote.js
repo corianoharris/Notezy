@@ -12,7 +12,6 @@ const CreateNote = () => {
 	const [content, setContent] = useState('');
 	const { user } = useAuth0();
 	const [email] = useState(user.name);
-	const [modified_at] = useState(" ");
 
 	const addNote = async (e) => {
 		e.preventDefault();
@@ -21,14 +20,15 @@ const CreateNote = () => {
 				email,
 				title,
 				content,
-				modified_at,
 			};
 			const response = await fetch('/api/notes', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(body),
 			});
-			console.log('The data', response);
+			if (response) {
+				console.log("success")
+			} else console.log("error")
 			window.location = '/notes'; // make a api call to db
 		} catch (err) {
 			console.error(err.message);
