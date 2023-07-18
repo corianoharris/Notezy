@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ViewNote.css';
 
 const ViewNote = ({note}) => {
-	const [title] = useState(note?.title);
-	const [content] = useState(note?.content);
+	const [title] = useState(note?.id);
+	const [content] = useState(note?.id);
 
 	return (
 		<>

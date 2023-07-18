@@ -14,6 +14,7 @@ const EditNote = ({ note }) => {
 		e.preventDefault();
 		try {
 			const body = {
+				id: note?.id,
 				title,
 				content,
 				modified_at: modifiedAt,
