@@ -70,7 +70,7 @@ const DisplayNotes = () => {
 							<ViewNote note={note}/>
 							<EditNote note={note}/>
 						</div>
-						<button className='btn btn-outline-danger button-delete' onClick={() => deleteNote(note)}>Delete</button>
+						<button className='btn btn-outline-danger button-delete' onClick={() => deleteNote(note.id)}>Delete</button>
 					</div>
 				</div>
 				))}
