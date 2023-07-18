@@ -29,21 +29,6 @@ const DisplayNotes = () => {
 		}
 	};
 
-	// const getNotes = async () => {
-	// 	try {
-	// 		const response = await fetch('/api/notes', {
-	// 			method: 'GET',
-	// 		});
-	// 		const jsonData = await response.json();
-	// 		const email = () =>
-	// 			jsonData.filter((note) => note.email === user.name);
-	// 		setNotes(email);
-	// 		setLoading(false);
-	// 	} catch (err) {
-	// 		console.error(err.message);
-	// 	}
-	// };
-
 	// declare the async data fetching function
 	const getNotes = useCallback(async () => {
 		const response = await fetch('/api/notes', {
@@ -78,7 +63,9 @@ const DisplayNotes = () => {
 				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong' key={note.id}>
 					<p className='note-card-title text-capitalize'>{note.title}</p>
 					<p className='note-card-status-dates text-lowercase'>{`date created: ${moment(note.created_at).format('MM-DD-YYYY')}`}</p>
-					<p className='note-card-status-dates text-lowercase'>{`date modifier: ${moment(note.modified_at).format('MM-DD-YYYY')}`}</p>
+					{note.modified_at &&
+						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_at).format('MM-DD-YYYY')}`}</p>
+					}
 					<div className='note-card-actions'>
 						<div className='note-card-view-edit-action text-uppercase'>
 							<ViewNote note={note} />
