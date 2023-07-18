@@ -12,7 +12,6 @@ const CreateNote = () => {
 	const [content, setContent] = useState('');
 	const { user } = useAuth0();
 	const [email] = useState(user.name);
-	const [modified_at] = useState(" ");
 
 	const addNote = async (e) => {
 		e.preventDefault();
@@ -21,7 +20,6 @@ const CreateNote = () => {
 				email,
 				title,
 				content,
-				modified_at,
 			};
 			const response = await fetch('/api/notes', {
 				method: 'POST',
