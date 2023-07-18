@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import { useAuth0 } from '@auth0/auth0-react';
 import "./DisplayNotes.css";
@@ -30,7 +30,7 @@ const DisplayNotes = () => {
 	};
 
 	// declare the async data fetching function
-	const getNotes = useCallback(async () => {
+	const getNotes = async () => {
 		const response = await fetch('/api/notes', {
 			method: 'GET',
 		});
@@ -40,13 +40,12 @@ const DisplayNotes = () => {
 		console.log('user notes: ', userNotes);
 		setNotes(userNotes);
 		setLoading(false);
-	}, [user.name])
+	}
 
 	useEffect(() => {
 		getNotes()
 			.catch(console.error);
-	}, [getNotes])
-
+	})
 
 	if (isLoading) {
 		return <SkeletonLoader />;
@@ -63,9 +62,9 @@ const DisplayNotes = () => {
 			<div className="notes-container p-1">
 				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong' key={note.id}>
 					<p className='note-card-title text-capitalize'>{note.title}</p>
-					<p className='note-card-status-dates text-lowercase'>{`date created: ${moment(note.created_at).format('MM-DD-YYYY')}`}</p>
-					{note.modified_at !== null &&
-						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_at).format('MM-DD-YYYY')}`}</p>
+					<p className='note-card-status-dates text-lowercase'>{`date created: ${moment(note.created_date).format('MM-DD-YYYY')}`}</p>
+					{note.modified_date !== null &&
+						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY')}`}</p>
 					}
 					<div className='note-card-actions'>
 						<div className='note-card-view-edit-action text-uppercase'>

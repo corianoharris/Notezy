@@ -28,8 +28,8 @@ const CreateNote = () => {
 			});
 			if (response) {
 				console.log("success")
+				window.location = '/yournotes';
 			} else console.log("error")
-			window.location = '/notes'; // make a api call to db
 		} catch (err) {
 			console.error(err.message);
 		}
