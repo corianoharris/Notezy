@@ -4,6 +4,15 @@
   margin: 20px auto;
 }
 
+.no-note-link {
+  text-decoration: underline;
+}
+
+.no-note-link:hover {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 800px) {
   .container {
     width: 60%;
