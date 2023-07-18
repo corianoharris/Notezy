@@ -28,8 +28,9 @@ const EditNote = ({ note }) => {
 
 			if (response) {
 				console.log("success")
+				window.location = '/notes';  // make a api call
 			} else console.log("error")
-			window.location = '/notes'; // make a api call
+			
 		} catch (err) {
 			console.error(err.message);
 		}

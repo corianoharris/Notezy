@@ -30,7 +30,7 @@ const DisplayNotes = () => {
 	};
 
 	// declare the async data fetching function
-	const getNotes = useCallback(async () => {
+	const getNotes = async () => {
 		const response = await fetch('/api/notes', {
 			method: 'GET',
 		});
@@ -40,13 +40,12 @@ const DisplayNotes = () => {
 		console.log('user notes: ', userNotes);
 		setNotes(userNotes);
 		setLoading(false);
-	}, [user.name])
+	}
 
 	useEffect(() => {
 		getNotes()
 			.catch(console.error);
-	}, [getNotes])
-
+	})
 
 	if (isLoading) {
 		return <SkeletonLoader />;
