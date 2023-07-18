@@ -5,19 +5,20 @@ import './EditNote.css';
 const EditNote = ({ note }) => {
 	const [title, setTitle] = useState(note?.title);
 	const [content, setContent] = useState(note?.content);
-	const [modified_at, setModified_At] = useState(note?.modified_at);
+	const [modifiedAt, setModifiedAt] = useState(null);
 
 
 	//edit description function
 	const updateNote = async (e, id, fields) => {
-		setModified_At(new Date());
+		id = note?.id
+		setModifiedAt(new Date());
 		e.preventDefault();
 		try {
 			const body = {
-				id: note?.id,
+				id,
 				title,
 				content,
-				modified_at,
+				modified_at: modifiedAt,
 			};
 
 			const response = await fetch(`/api/notes/${note?.id}`, {
