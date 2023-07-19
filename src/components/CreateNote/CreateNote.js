@@ -47,7 +47,7 @@ const CreateNote = () => {
 					</label>
 					<input
 						type="text"
-						className="form-control p-3 first-letter border border-light input"
+						className="form-control is-valid p-3 first-letter border border-light input"
 						id="note-title"
 						placeholder="add title..."
 						name="note"
@@ -57,7 +57,7 @@ const CreateNote = () => {
 						required
 					/>
 					<div className="valid-feedback mt-2 mb-2 fw-semibold">Thank you.</div>
-					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold">
+					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold" id="user-note-title" aria-describedby="user-note-title">
 						Required field. Max characters is 60. 
 					</div>
 					<label className="h3 text-white mt-1" htmlFor="note-content">
@@ -65,7 +65,7 @@ const CreateNote = () => {
 					</label>
 					<textarea
 						type="text"
-						className="form-control p-3 bg-white dark first-letter border border-light input"
+						className="form-control is-valid p-3 bg-white dark first-letter border border-light input"
 						id="note-content"
 						placeholder="add note..."
 						name="note-content"
@@ -73,7 +73,7 @@ const CreateNote = () => {
 						onChange={(e) => setContent(e.target.value)}
 						required></textarea>
 					<div className="valid-feedback mt-2 mb-2 fw-semibold">Thank you.</div>
-					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold">
+					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold" id="user-note-content" aria-describedby="user-note-content">
 						Required field.
 					</div>
 					<div className="text-right">
