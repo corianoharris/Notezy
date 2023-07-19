@@ -36,7 +36,7 @@ exports[`renders correctly 1`] = `
       >
         <a
           className="nav-link active link-underline-light link-underline-opacity-100-hover"
-          href="/note"
+          href="/createanote"
         >
            Create a note
         </a>
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
       >
         <a
           className="nav-link link-underline-light link-underline-opacity-100-hover"
-          href="/notes"
+          href="/yournotes"
         >
           Your notes
         </a>

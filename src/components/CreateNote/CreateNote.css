@@ -6,7 +6,7 @@
 
 .input-user-message {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 @media screen and (min-width: 800px) {

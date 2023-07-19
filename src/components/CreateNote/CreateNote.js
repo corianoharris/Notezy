@@ -56,8 +56,8 @@ const CreateNote = () => {
 						maxLength={60}
 						required
 					/>
-					<div className="valid-feedback mt-2 mb-2 badge rounded-pill text-bg-secondary input-user-message">Thank you.</div>
-					<div className="invalid-feedback mt-2 mb-2 text-white badge rounded-pill text-bg-secondary input-user-message">
+					<div className="valid-feedback mt-2 mb-2 input-user-message">Thank you.</div>
+					<div className="invalid-feedback mt-2 mb-2 text-white input-user-message">
 						Required field. Max characters is 60. 
 					</div>
 					<label className="h3 text-white mt-1" htmlFor="note-content">
@@ -72,8 +72,8 @@ const CreateNote = () => {
 						value={DOMPurify.sanitize(content)}
 						onChange={(e) => setContent(e.target.value)}
 						required></textarea>
-					<div className="valid-feedback mt-2 mb-2">Thank you.</div>
-					<div className="invalid-feedback mt-2 mb-2 text-white">
+					<div className="valid-feedback mt-2 mb-2 input-user-message">Thank you.</div>
+					<div className="invalid-feedback mt-2 mb-2 text-white input-user-message">
 						Required field.
 					</div>
 					<div className="text-right">
