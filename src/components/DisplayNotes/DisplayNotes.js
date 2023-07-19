@@ -29,7 +29,8 @@ const DisplayNotes = () => {
 		}
 	};
 
-	// declare the async data fetching function
+	useEffect(() => {
+			// declare the async data fetching function
 	const getNotes = async () => {
 		const response = await fetch('/api/notes', {
 			method: 'GET',
@@ -42,11 +43,9 @@ const DisplayNotes = () => {
 		setLoading(false);
 	}
 
-	useEffect(() => {
 		getNotes()
 			.catch(console.error);
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [user.name]);
 
 	if (isLoading) {
 		return <SkeletonLoader />;
