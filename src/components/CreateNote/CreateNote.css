@@ -4,6 +4,11 @@
   margin: 20px auto;
 }
 
+.input-user-message {
+  font-size: 13px;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 800px) {
   .container {
     width: 60%;

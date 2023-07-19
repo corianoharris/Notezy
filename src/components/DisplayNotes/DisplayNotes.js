@@ -67,7 +67,7 @@ const DisplayNotes = () => {
 						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY')}`}</p>
 					}
 					<div className='note-card-actions'>
-						<div className='note-card-view-edit-action text-uppercase'>
+						<div className='note-card-view-edit-action'>
 							<ViewNote note={note} />
 							<EditNote note={note} />
 						</div>

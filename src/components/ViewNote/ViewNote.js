@@ -17,7 +17,7 @@ const ViewNote = ({note}) => {
 			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`view-${note?.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-dark text-white">
+						<div className="modal-header bg-secondary text-uppercase text-white">
 							<h4 className="modal-title">View Note</h4>
 							<button
 								type="button"
@@ -36,7 +36,7 @@ const ViewNote = ({note}) => {
 									Title:
 								</label>
 								<p
-									className="text-left bg-light text-dark input-field"
+									className="text-left bg-light text-dark text-capitalize input-field"
 									id={`#view-title${note?.id}`}
 									tabIndex="0">
 								{title}

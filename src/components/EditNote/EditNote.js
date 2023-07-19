@@ -47,7 +47,7 @@ const EditNote = ({ note }) => {
 			<div className="modal bg-dark fade" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id={`edit-${note.id}`}>
 				<div className="modal-dialog">
 					<div className="modal-content text-dark">
-						<div className="modal-header bg-dark text-white">
+						<div className="modal-header bg-secondary text-uppercase text-white">
 							<h4 className="modal-title text-light">Edit Note</h4>
 							<button
 								type="button"
@@ -66,7 +66,7 @@ const EditNote = ({ note }) => {
 								</label>
 								<input
 									type="text"
-									className="form-control text input-field"
+									className="form-control text-capitalize input-field"
 									id={`#edit-title${note.id}`}
 									name="title"
 									tabIndex="0"
