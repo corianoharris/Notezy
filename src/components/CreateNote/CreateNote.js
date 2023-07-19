@@ -42,7 +42,7 @@ const CreateNote = () => {
 			<div
 				className="text-white container rounded shadow bg-dark mt-4">
 				<form className="mt-5 was-validated" onSubmit={addNote}>
-					<label className="h3 text-white mt-2" htmlFor="note-title">
+					<label className="h3 text-white mt-2 form-label" htmlFor="note-title">
 						Title
 					</label>
 					<input
@@ -56,11 +56,10 @@ const CreateNote = () => {
 						maxLength={60}
 						required
 					/>
-					<div className="valid-feedback mt-2 mb-2 fw-semibold">Thank you.</div>
 					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold" id="user-note-title" aria-describedby="user-note-title">
 						Required field. Max characters is 60. 
 					</div>
-					<label className="h3 text-white mt-1" htmlFor="note-content">
+					<label className="h3 text-white mt-1 form-label" htmlFor="note-content">
 						Note
 					</label>
 					<textarea
@@ -72,7 +71,6 @@ const CreateNote = () => {
 						value={DOMPurify.sanitize(content)}
 						onChange={(e) => setContent(e.target.value)}
 						required></textarea>
-					<div className="valid-feedback mt-2 mb-2 fw-semibold">Thank you.</div>
 					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold" id="user-note-content" aria-describedby="user-note-content">
 						Required field.
 					</div>
