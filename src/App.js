@@ -41,13 +41,13 @@ function App() {
 		<Auth0Provider
 			domain={domain}
 			clientId={clientId}
-			redirectUri={`${window.location.origin}/notes`}
+			redirectUri={`${window.location.origin}/yournotes`}
 			onRedirectCallback={onRedirectCallback}>
 			<Router history={history}>
 				<Switch>
 					<Route exact path="/" component={Login} />
-					<ProtectedRoute exact path="/note" component={CreateNote} />
-					<ProtectedRoute exact path="/notes" component={DisplayNotes} />
+					<ProtectedRoute exact path="/createanote" component={CreateNote} />
+					<ProtectedRoute exact path="/yournotes" component={DisplayNotes} />
 					<Route path="*"
 						component={PageNotFound}
 					/>
