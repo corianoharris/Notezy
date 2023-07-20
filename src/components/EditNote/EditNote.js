@@ -27,7 +27,7 @@ const EditNote = ({ note }) => {
 
 			if (response) {
 				console.log("success")
-				window.location = '/notes';
+				window.location = '/yournotes';
 			} else console.log("error")
 			
 		} catch (err) {
