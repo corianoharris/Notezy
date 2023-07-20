@@ -38,9 +38,11 @@
 }
 
 .note-card-status-dates {
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 700;
   margin-bottom: 0;
+  color: lightslategrey;
+  letter-spacing: 2px;
 }
 
 @media screen and (min-width: 800px) {

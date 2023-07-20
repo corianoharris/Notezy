@@ -22,7 +22,9 @@ const DisplayNotes = () => {
 				method: 'DELETE',
 				body: JSON.stringify({ id }),
 			});
-			console.log(deleteNote);
+			if (deleteNote) {
+				console.log("deleted note")
+			}
 			setNotes(notes.filter((note) => note.id !== id));
 		} catch (err) {
 			console.error(err.message);
@@ -37,7 +39,6 @@ const DisplayNotes = () => {
 		const jsonData = await response.json();
 		const userNotes = () =>
 			jsonData.filter((note) => note.email === user.name);
-		console.log('user notes: ', userNotes);
 		setNotes(userNotes);
 		setLoading(false);
 	}
@@ -65,7 +66,7 @@ const DisplayNotes = () => {
 					<p className='note-card-title text-capitalize'>{note.title}</p>
 					<p className='note-card-status-dates text-lowercase'>{`date created: ${moment(note.created_date).format('MM-DD-YYYY')}`}</p>
 					{note.modified_date !== null &&
-						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY')}`}</p>
+						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY h:mm a')} `}</p>
 					}
 					<div className='note-card-actions'>
 						<div className='note-card-view-edit-action'>
