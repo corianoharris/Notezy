@@ -45,8 +45,12 @@
   letter-spacing: 2px;
 }
 
+.note-card-status-dates-modified {
+  color: darkslategrey;
+}
+
 @media screen and (min-width: 800px) {
   .note-card {
-    width: 500px;
+    max-width: 500px;
   }
 }

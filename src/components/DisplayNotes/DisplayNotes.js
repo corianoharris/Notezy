@@ -65,8 +65,8 @@ const DisplayNotes = () => {
 				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong' key={note.id}>
 					<p className='note-card-title text-capitalize'>{note.title}</p>
 					<p className='note-card-status-dates text-lowercase'>{`date created: ${moment(note.created_date).format('MM-DD-YYYY')}`}</p>
-					{note.modified_date !== null &&
-						<p className='note-card-status-dates text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY h:mm a')} `}</p>
+					{note.modified_date !== note.created_date &&
+						<p className='note-card-status-dates note-card-status-dates-modified text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY h:mm a')} `}</p>
 					}
 					<div className='note-card-actions'>
 						<div className='note-card-view-edit-action'>
