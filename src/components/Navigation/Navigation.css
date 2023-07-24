@@ -1,8 +1,12 @@
 .navbar {
-  align-items: center;
   padding-bottom: 30px;
   width: 100vw;
   height: 200px;
+}
+
+.navbar-nav {
+  align-items: center;
+  gap: 10px;
 }
 
 .navbar-brand {
@@ -23,9 +27,6 @@
   font-weight: bolder;
 }
 
-.navbar-nav {
-  gap: 10px;
-}
 
 .greeting-container {
   position: absolute;
@@ -39,9 +40,15 @@
 }
 
 .brand-link {
-  display: inline-block;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  gap: 5px;
+}
+
+.brand-name {
+  font-size: 1.725rem;
+  pointer-events: none;
+  cursor: default;
 }
 
 .branding-image {
@@ -50,17 +57,21 @@
   height: 16px;
 }
 
-@media screen and (min-wdith: 480px) {
+@media screen and (min-width: 480px) {
   .navbar-brand {
     font-size: 1.5rem;
   }
 }
 
-@media screen and ( min-width: 990px) {
+@media screen and (min-width: 990px) {
   .branding-image {
     height: 32px;
     width: 32px;
   }
 }
 
-
+@media screen and (max-width: 900px) {
+  .navbar-nav {
+    display: block;
+  }
+}
