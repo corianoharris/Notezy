@@ -18,7 +18,7 @@ const Navigation = () => {
 
 					<a
 						href={'/'}
-						className="navbar-brand link-underline-light link-underline-opacity-100-hover">
+						className="navbar-brand link-underline-light link-underline-opacity-100-hover brand-name">
 						Notezy
 					</a>
 							</div>
