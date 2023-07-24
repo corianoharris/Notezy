@@ -1,11 +1,11 @@
 import React from 'react';
-import "./SkeletonLoader.css";
+import "./SkeletonNotesLoader.css";
 
 // components
 // import Navigation from '../Navigation';
 import Footer from '../Footer';
 
-const SkeletonLoader = () => {
+const SkeletonNotesLoader = () => {
 
 	return (
 		<>
@@ -28,4 +28,4 @@ const SkeletonLoader = () => {
 	);
 };
 
-export default SkeletonLoader;
+export default SkeletonNotesLoader;
