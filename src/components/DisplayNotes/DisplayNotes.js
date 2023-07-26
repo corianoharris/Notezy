@@ -10,26 +10,27 @@ import Navigation from '../Navigation';
 import SkeletonNotesLoader from '../SkeletonNotesLoader/SkeletonNotesLoader';
 import NoNotes from '../NoNotes';
 import Footer from '../Footer';
+import DeleteNote from '../DeleteNote';
 
 const DisplayNotes = () => {
 	const { user } = useAuth0();
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 
-	const deleteNote = async (id) => {
-		try {
-			const deleteNote = await fetch('/api/notes', {
-				method: 'DELETE',
-				body: JSON.stringify({ id }),
-			});
-			if (deleteNote) {
-				console.log("deleted note")
-			}
-			setNotes(notes.filter((note) => note.id !== id));
-		} catch (err) {
-			console.error(err.message);
-		}
-	};
+	// const deleteNote = async (id) => {
+	// 	try {
+	// 		const deleteNote = await fetch('/api/notes', {
+	// 			method: 'DELETE',
+	// 			body: JSON.stringify({ id }),
+	// 		});
+	// 		if (deleteNote) {
+	// 			console.log("deleted note")
+	// 		}
+	// 		setNotes(notes.filter((note) => note.id !== id));
+	// 	} catch (err) {
+	// 		console.error(err.message);
+	// 	}
+	// };
 
 	// declare the async data fetching function
 	const getNotes = async () => {
@@ -57,10 +58,19 @@ const DisplayNotes = () => {
 		return <NoNotes />;
 	}
 
+	if (notes.length < 0) {
+		
+	}
+
 	return (
 		<>
 			<Navigation />
-			<h2 className='text-center text-dark m-4'>Your notes...</h2>
+				{notes.length === 1 && (
+					<h2 className='text-center text-dark m-4'>{`You have ${notes.length} note`}</h2>
+				)}
+				{notes.length > 1 && (
+					<h2 className='text-center text-dark m-4'>{`You have ${notes.length} notes`}</h2>
+				)}
 			<div className="notes-container p-1">
 				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong' key={note.id}>
 					<p className='note-card-title text-capitalize'>{note.title}</p>
@@ -73,7 +83,7 @@ const DisplayNotes = () => {
 							<ViewNote note={note} />
 							<EditNote note={note} />
 						</div>
-						<button className='btn btn-outline-danger button-delete' onClick={() => deleteNote(note.id)}>Delete</button>
+						<DeleteNote note={note} />
 					</div>
 				</div>
 				))}
