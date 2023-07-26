@@ -10,26 +10,27 @@ import Navigation from '../Navigation';
 import SkeletonNotesLoader from '../SkeletonNotesLoader/SkeletonNotesLoader';
 import NoNotes from '../NoNotes';
 import Footer from '../Footer';
+import DeleteNote from '../DeleteNote';
 
 const DisplayNotes = () => {
 	const { user } = useAuth0();
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 
-	const deleteNote = async (id) => {
-		try {
-			const deleteNote = await fetch('/api/notes', {
-				method: 'DELETE',
-				body: JSON.stringify({ id }),
-			});
-			if (deleteNote) {
-				console.log("deleted note")
-			}
-			setNotes(notes.filter((note) => note.id !== id));
-		} catch (err) {
-			console.error(err.message);
-		}
-	};
+	// const deleteNote = async (id) => {
+	// 	try {
+	// 		const deleteNote = await fetch('/api/notes', {
+	// 			method: 'DELETE',
+	// 			body: JSON.stringify({ id }),
+	// 		});
+	// 		if (deleteNote) {
+	// 			console.log("deleted note")
+	// 		}
+	// 		setNotes(notes.filter((note) => note.id !== id));
+	// 	} catch (err) {
+	// 		console.error(err.message);
+	// 	}
+	// };
 
 	// declare the async data fetching function
 	const getNotes = async () => {
@@ -82,7 +83,7 @@ const DisplayNotes = () => {
 							<ViewNote note={note} />
 							<EditNote note={note} />
 						</div>
-						<button className='btn btn-outline-danger button-delete' onClick={() => deleteNote(note.id)}>Delete</button>
+						<DeleteNote note={note} />
 					</div>
 				</div>
 				))}
