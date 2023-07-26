@@ -57,10 +57,19 @@ const DisplayNotes = () => {
 		return <NoNotes />;
 	}
 
+	if (notes.length < 0) {
+		
+	}
+
 	return (
 		<>
 			<Navigation />
-			<h2 className='text-center text-dark m-4'>Your notes...</h2>
+				{notes.length === 1 && (
+					<h2 className='text-center text-dark m-4'>{`You have ${notes.length} note`}</h2>
+				)}
+				{notes.length > 1 && (
+					<h2 className='text-center text-dark m-4'>{`You have ${notes.length} notes`}</h2>
+				)}
 			<div className="notes-container p-1">
 				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong' key={note.id}>
 					<p className='note-card-title text-capitalize'>{note.title}</p>
