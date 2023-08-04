@@ -7,20 +7,27 @@
   align-items: center;
   width: 90%;
   margin: 20px auto;
+  background-color: transparent;
  
 }
 
 .note-card {
   width: 100%;
   box-shadow: 5px 10px 18px #888888;
+}
 
+.header {
+  color: #800080;
+  font-weight: bold;
 }
 
 .note-card-title {
   font-weight: bolder;
-  background-color: lightgrey;
+  background-color: #800080;
+  opacity: .5;
   padding: 10px;
   border-radius: 5px;
+   box-shadow: 5px 10px 18px #888888;
 }
 
 .note-card-actions {
@@ -39,9 +46,8 @@
 
 .note-card-status-dates {
   font-size: 9px;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 0;
-  color: lightslategrey;
   letter-spacing: 2px;
 }
 

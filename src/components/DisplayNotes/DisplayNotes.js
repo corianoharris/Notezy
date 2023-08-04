@@ -17,21 +17,6 @@ const DisplayNotes = () => {
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 
-	// const deleteNote = async (id) => {
-	// 	try {
-	// 		const deleteNote = await fetch('/api/notes', {
-	// 			method: 'DELETE',
-	// 			body: JSON.stringify({ id }),
-	// 		});
-	// 		if (deleteNote) {
-	// 			console.log("deleted note")
-	// 		}
-	// 		setNotes(notes.filter((note) => note.id !== id));
-	// 	} catch (err) {
-	// 		console.error(err.message);
-	// 	}
-	// };
-
 	// declare the async data fetching function
 	const getNotes = async () => {
 		const response = await fetch('/api/notes', {
@@ -66,14 +51,14 @@ const DisplayNotes = () => {
 		<>
 			<Navigation />
 				{notes.length === 1 && (
-					<h2 className='text-center text-dark m-4'>{`You have ${notes.length} note`}</h2>
+					<h2 className='header text-center m-4'>{`You have ${notes.length} note`}</h2>
 				)}
 				{notes.length > 1 && (
-					<h2 className='text-center text-dark m-4'>{`You have ${notes.length} notes`}</h2>
+					<h2 className='header text-center m-4'>{`You have ${notes.length} notes`}</h2>
 				)}
 			<div className="notes-container p-1">
-				{notes.map((note) => (<div className='note-card text-left p-2 shadow-2-strong' key={note.id}>
-					<p className='note-card-title text-capitalize'>{note.title}</p>
+				{notes.map((note) => (<div className='note-card text-left p-2' key={note.id}>
+					<p className='note-card-title text-capitalize text-white shadow-2-strong'>{note.title}</p>
 					<p className='note-card-status-dates text-lowercase'>{`date created: ${moment(note.created_date).format('MM-DD-YYYY')}`}</p>
 					{note.modified_date !== note.created_date &&
 						<p className='note-card-status-dates note-card-status-dates-modified text-lowercase'>{`last modified: ${moment(note.modified_date).format('MM-DD-YYYY h:mm a')} `}</p>
