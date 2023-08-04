@@ -38,16 +38,16 @@ const CreateNote = () => {
 		<>
 			< Navigation />
 
-			<h2 className='text-center text-dark m-4'>Let's create a note...</h2>
+			<h2 className='header text-center m-4'>Let's create a note...</h2>
 			<div
-				className="text-white container rounded shadow bg-dark mt-4">
+				className="text-white container rounded  mt-4">
 				<form className="mt-5 was-validated" onSubmit={addNote}>
-					<label className="h3 text-white mt-2 form-label" htmlFor="note-title">
+					<label className="label-title h3 mt-2 form-label  mb-2" htmlFor="note-title">
 						Title
 					</label>
 					<input
 						type="text"
-						className="form-control is-valid p-3 first-letter border border-light input"
+						className="form-control is-valid p-3 first-letter border border-light input shadow-lg"
 						id="note-title"
 						placeholder="add title..."
 						name="note"
@@ -56,26 +56,26 @@ const CreateNote = () => {
 						maxLength={60}
 						required
 					/>
-					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold" id="user-note-title" aria-describedby="user-note-title">
+					<div className="invalid-feedback mt-2 fw-semibold fs-6" id="user-note-title" aria-describedby="user-note-title">
 						Required field. Max characters is 60. 
 					</div>
-					<label className="h3 text-white mt-1 form-label" htmlFor="note-content">
+					<label className="label-title h3 mt-3 form-label" htmlFor="note-content">
 						Note
 					</label>
 					<textarea
 						type="text"
-						className="form-control is-valid p-3 bg-white dark first-letter border border-light input"
+						className="form-control is-valid p-3 bg-white dark first-letter border border-light input shadow-lg"
 						id="note-content"
 						placeholder="add note..."
 						name="note-content"
 						value={DOMPurify.sanitize(content)}
 						onChange={(e) => setContent(e.target.value)}
 						required></textarea>
-					<div className="invalid-feedback mt-2 mb-2 text-white fw-semibold" id="user-note-content" aria-describedby="user-note-content">
+					<div className="invalid-feedback mt-2 mb-2 fw-semibold fs-6" id="user-note-content" aria-describedby="user-note-content">
 						Required field.
 					</div>
 					<div className="text-right">
-						<button className="btn btn-outline-light m-4" onClick={addNote}>Add</button>
+						<button className="btn btn-outline-light mt-2 mb-2" onClick={addNote}>Add</button>
 					</div>
 				</form>
 			</div>

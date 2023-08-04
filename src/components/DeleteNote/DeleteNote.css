@@ -10,7 +10,10 @@
 
 .modal-header {
   font-weight: 800;
-  border-bottom: 1px solid black;
+}
+
+.modal-body {
+  font-weight: 800;
 }
 
 .modal-content {

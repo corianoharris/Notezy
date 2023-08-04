@@ -2,20 +2,33 @@
 .footer {
   position: fixed;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 100px;
   width: 100%;
   text-align: center;
   font-size: 14px;
-  background-color: lightgrey;
   padding: 20px;
+  border: 2px solid #800080;
+}
+
+.footer-link {
+  color: #800080;
+  font-weight: 700;
+}
+
+.footer-link:hover {
+  color: #800080;
+  opacity: .7;
+  /* padding-bottom: 5px;
+  border-bottom: 1px solid #800080; */
 }
 
 footer > a {
   text-decoration: none;
   background-color: transparent;
   color: black;
-  font-size: 14px;
-}
-
-.footer-link {
-  font-size: 16px;
+  font-size: 13px;
 }

@@ -15,7 +15,7 @@ const Login = () => {
 				>Notezy
 				</h1>
 				<button
-					className="btn btn-outline-dark btn-lg"
+					className="btn btn-lg"
 					onClick={() => loginWithRedirect()}>
 					Enter
 				</button>

@@ -7,7 +7,7 @@ import brandLogo from '../../assets/favicon32.png'; // with import
 const Navigation = () => {
 	return (
 		<>
-			<nav className="navbar navbar-dark bg-dark navbar-expand-lg border-bottom-3 shadow ">
+			<nav className="navbar navbar-dark navbar-expand-lg border-bottom-3 shadow ">
 			
 				<div className="collpase navbar-collapse">
 					<ul className="navbar-nav mr-auto mt-2">
