@@ -5,21 +5,6 @@ import UserGreeting from '../UserGreeting';
 import brandLogo from '../../assets/favicon32.png'; // with import
 
 const Navigation = () => {
-
-	const navLinks = document.getElementsByClassName("nav-link");
-
-	console.log(navLinks);
-
-	useEffect(() => {
-		if (navLinks) {
-			navLinks[0].addEventListener('click', () => {
-				navLinks[0].classList.add("active");
-			});
-		}
-	}, [navLinks])
-	
-
-
 	return (
 		<>
 			<nav className="navbar navbar-dark navbar-expand-lg border-bottom-3 shadow ">
