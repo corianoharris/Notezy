@@ -4,8 +4,7 @@ import DOMPurify from 'dompurify';
 import { useAuth0 } from '@auth0/auth0-react';
 
 // components
-import  Navigation from '../Navigation';
-import Footer from '../Footer';
+import Navigation from '../Navigation';
 
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
@@ -49,8 +48,7 @@ const CreateNote = () => {
 	
 	return (
 		<>
-			< Navigation />
-
+			<Navigation />
 			<h2 className='header text-center m-4'>Let's create a note...</h2>
 			<div
 				className="text-white container rounded  mt-4">
@@ -92,7 +90,6 @@ const CreateNote = () => {
 					</div>
 				</form>
 			</div>
-			<Footer />
 		</>
 	);
 };
