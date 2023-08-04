@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import LogoutButton from '../LogoutButton';
 import './Navigation.css';
 import UserGreeting from '../UserGreeting';
