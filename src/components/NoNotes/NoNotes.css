@@ -1,16 +1,18 @@
 
 .container {
-  width: 90%;
   margin: 20px auto;
+  color: #800080;
 }
 
 .no-note-link {
-  text-decoration: underline;
+  color: #800080;
+  opacity: .7;
+  font-weight: 500;
 }
-
 .no-note-link:hover {
   font-weight: 900;
   text-decoration: underline;
+  color: #800080;
 }
 
 @media screen and (min-width: 800px) {

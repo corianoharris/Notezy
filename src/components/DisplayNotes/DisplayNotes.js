@@ -9,7 +9,6 @@ import ViewNote from '../ViewNote';
 import Navigation from '../Navigation';
 import SkeletonNotesLoader from '../SkeletonNotesLoader/SkeletonNotesLoader';
 import NoNotes from '../NoNotes';
-import Footer from '../Footer';
 import DeleteNote from '../DeleteNote';
 
 const DisplayNotes = () => {
@@ -73,7 +72,6 @@ const DisplayNotes = () => {
 				</div>
 				))}
 			</div>
-			<Footer />
 		</>
 	);
 };

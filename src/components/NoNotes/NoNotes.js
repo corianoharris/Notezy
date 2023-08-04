@@ -5,12 +5,12 @@ import './NoNotes.css';
 const NoNotes = () => {
 	return (
 		<>
-			<div className='text-center p-5 mx-auto border-0 login'>
+			<div className='text-center p-5 mx-auto border-0 login w-100'>
 
 			
 				<h2 className="container w-100 mt-5 mx-auto text-center">
 				You currently don't have any notes. Let's create a {' '}
-				<a className="no-note-link text-dark" href="./createanote">
+				<a className="no-note-link" href="./createanote">
 					Note
 				</a>
 				</h2>

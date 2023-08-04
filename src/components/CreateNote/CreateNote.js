@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./CreateNote.css";
 import DOMPurify from 'dompurify';
 import { useAuth0 } from '@auth0/auth0-react';
 
 // components
-import  Navigation from '../Navigation';
-import Footer from '../Footer';
+import Navigation from '../Navigation';
 
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
 	const [content, setContent] = useState('');
 	const { user } = useAuth0();
 	const [email] = useState(user.name);
+
+	const buttonRef = useRef();
+
+	
 
 	const addNote = async (e) => {
 		e.preventDefault();
@@ -34,10 +37,18 @@ const CreateNote = () => {
 			console.error(err.message);
 		}
 	};
+
+	useEffect(() => {
+		if (title < 1 || content < 1) {
+			buttonRef.current.classList.add("is-disabled");
+		} else {
+			buttonRef.current.classList.remove("is-disabled");
+		}
+	}, [content, title])
+	
 	return (
 		<>
-			< Navigation />
-
+			<Navigation />
 			<h2 className='header text-center m-4'>Let's create a note...</h2>
 			<div
 				className="text-white container rounded  mt-4">
@@ -75,11 +86,10 @@ const CreateNote = () => {
 						Required field.
 					</div>
 					<div className="text-right">
-						<button className="btn btn-outline-light mt-2 mb-2" onClick={addNote}>Add</button>
+						<button ref={ buttonRef } className="btn btn-outline-light mt-4 mb-2 add-note-btn is-disabled" id="add-btn" onClick={addNote}>Add</button>
 					</div>
 				</form>
 			</div>
-			<Footer />
 		</>
 	);
 };

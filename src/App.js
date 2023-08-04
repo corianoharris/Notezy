@@ -13,6 +13,7 @@ import DisplayNotes from './components/DisplayNotes';
 import PageNotFound from './components/PageNotFound';
 import Login from './components/Login';
 import ProtectedPageLoader from './components/ProtectedPageLoader';
+import Footer from './components/Footer';
 
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -38,11 +39,13 @@ const onRedirectCallback = (appState) => {
 
 function App() {
 	return (
+		<>
 		<Auth0Provider
 			domain={domain}
 			clientId={clientId}
 			redirectUri={`${window.location.origin}/yournotes`}
 			onRedirectCallback={onRedirectCallback}>
+			
 			<Router history={history}>
 				<Switch>
 					<Route exact path="/" component={Login} />
@@ -53,7 +56,9 @@ function App() {
 					/>
 				</Switch>
 			</Router>
-		</Auth0Provider>
+			</Auth0Provider>
+			<Footer />
+			</>
 	);
 }
 

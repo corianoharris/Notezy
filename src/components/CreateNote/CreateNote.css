@@ -24,6 +24,12 @@
   font-weight: 900;
 }
 
+.is-disabled {
+  cursor: not-allowed;
+  color: grey;
+  background-color: lightgrey !important;
+}
+
 @media screen and (min-width: 800px) {
   .container {
     max-width: 650px;

@@ -14,18 +14,27 @@
   font-size: 1rem;
 }
 
-.nav-link {
+.nav-link, .nav-link:visited, .nav-link:link {
   padding-bottom: 5px;
   width: auto;
+  color: darkgrey;
 }
 
 .nav-link:hover {
   font-weight: 700;
   padding-bottom: 5px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.nav-link:active  {
+  color: white;
+  font-weight: 700;
 }
 
 .active {
   font-weight: bolder;
+  color: grey;
 }
 
 
