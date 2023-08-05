@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 // components
 import Navigation from '../Navigation';
+import Footer from '../Footer';
 
 const CreateNote = () => {
 	const [title, setTitle] = useState('');
@@ -90,6 +91,7 @@ const CreateNote = () => {
 					</div>
 				</form>
 			</div>
+			<Footer />
 		</>
 	);
 };

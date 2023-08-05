@@ -1,5 +1,6 @@
 import React from 'react';
 import './PageNotFound.css';
+import Footer from '../Footer';
 
 const PageNotFound = () => {
 	return (
@@ -16,7 +17,8 @@ const PageNotFound = () => {
 			}>
 				Sorry, page not found. Please try again. 
 				</h2>
-				</div>
+			</div>
+			<Footer />
 		</>
 	);
 };

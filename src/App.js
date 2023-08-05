@@ -13,7 +13,6 @@ import DisplayNotes from './components/DisplayNotes';
 import PageNotFound from './components/PageNotFound';
 import Login from './components/Login';
 import ProtectedPageLoader from './components/ProtectedPageLoader';
-import Footer from './components/Footer';
 
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -57,7 +56,6 @@ function App() {
 				</Switch>
 			</Router>
 			</Auth0Provider>
-			<Footer />
 			</>
 	);
 }
