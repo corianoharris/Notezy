@@ -44,7 +44,6 @@ function App() {
 			clientId={clientId}
 			redirectUri={`${window.location.origin}/yournotes`}
 			onRedirectCallback={onRedirectCallback}>
-			
 			<Router history={history}>
 				<Switch>
 					<Route exact path="/" component={Login} />
