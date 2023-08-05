@@ -1,14 +1,16 @@
 
 .notes-container {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   align-items: center;
   width: 90%;
+  max-height: 90%;
   margin: 20px auto;
-  background-color: transparent;
- 
+  background-color: transparent; 
 }
 
 .note-card {
@@ -53,6 +55,12 @@
 
 .note-card-status-dates-modified {
   color: darkslategrey;
+}
+
+.notes-count {
+  font-size: 28px;
+  background-color: #800080;
+  color: white;
 }
 
 @media screen and (min-width: 800px) {

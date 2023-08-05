@@ -50,11 +50,14 @@ const DisplayNotes = () => {
 	return (
 		<>
 			<Navigation />
-				{notes.length === 1 && (
-					<h2 className='header text-center m-4'>{`You have ${notes.length} note`}</h2>
+				
+			
+
+			{notes.length === 1 && (
+					<h2 className='header text-center m-4'><span>{`You have `}</span><span className='notes-count text-center badge rounded-pill'>{notes.length}</span><span>{` note...` }</span></h2>
 				)}
 				{notes.length > 1 && (
-					<h2 className='header text-center m-4'>{`You have ${notes.length} notes`}</h2>
+				<h2 className='header text-center m-4'><span>{`You have `}</span><span className='notes-count text-center badge rounded-pill'>{notes.length}</span><span>{` notes...` }</span></h2>
 				)}
 			<div className="notes-container p-1">
 				{notes.map((note) => (<div className='note-card text-left p-2' key={note.id}>
@@ -72,6 +75,7 @@ const DisplayNotes = () => {
 					</div>
 				</div>
 				))}
+				
 			</div>
 			<Footer />
 		</>
