@@ -10,6 +10,7 @@ import Navigation from '../Navigation';
 import SkeletonNotesLoader from '../SkeletonNotesLoader/SkeletonNotesLoader';
 import NoNotes from '../NoNotes';
 import DeleteNote from '../DeleteNote';
+import Footer from '../Footer';
 
 const DisplayNotes = () => {
 	const { user } = useAuth0();
@@ -72,6 +73,7 @@ const DisplayNotes = () => {
 				</div>
 				))}
 			</div>
+			<Footer />
 		</>
 	);
 };

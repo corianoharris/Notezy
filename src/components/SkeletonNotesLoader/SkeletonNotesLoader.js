@@ -21,6 +21,8 @@ const SkeletonNotesLoader = () => {
 					</div>
 					<div className='skeleton skeleton-text'>
 					</div>
+					<div className='skeleton skeleton-text'>
+					</div>
 				</div>
 			</div>
 			<Footer />
