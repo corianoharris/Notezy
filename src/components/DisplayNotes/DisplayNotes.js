@@ -11,11 +11,13 @@ import SkeletonNotesLoader from '../SkeletonNotesLoader/SkeletonNotesLoader';
 import NoNotes from '../NoNotes';
 import DeleteNote from '../DeleteNote';
 import Footer from '../Footer';
+import FooterNotFixed from '../FooterNotFixed';
 
 const DisplayNotes = () => {
 	const { user } = useAuth0();
 	const [notes, setNotes] = useState([]);
 	const [isLoading, setLoading] = useState(true);
+	const [isFixedFooter, setIsFixedFooter] = useState(false);
 
 	// declare the async data fetching function
 	const getNotes = async () => {
@@ -32,8 +34,13 @@ const DisplayNotes = () => {
 	useEffect(() => {
 		getNotes()
 			.catch(console.error);
+		
+			if (notes.length < 3) {
+				setIsFixedFooter(true);
+			} else setIsFixedFooter(false);
+		
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [notes]);
 
 	if (isLoading) {
 		return <SkeletonNotesLoader />;
@@ -43,16 +50,9 @@ const DisplayNotes = () => {
 		return <NoNotes />;
 	}
 
-	if (notes.length < 0) {
-		
-	}
-
 	return (
 		<>
 			<Navigation />
-				
-			
-
 			{notes.length === 1 && (
 					<h2 className='header text-center m-4'><span>{`You have `}</span><span className='notes-count text-center badge rounded-pill'>{notes.length}</span><span>{` note...` }</span></h2>
 				)}
@@ -75,9 +75,8 @@ const DisplayNotes = () => {
 					</div>
 				</div>
 				))}
-				
 			</div>
-			<Footer />
+			{ isFixedFooter ?  <Footer /> : <FooterNotFixed /> }
 		</>
 	);
 };
